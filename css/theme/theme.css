@@ -1,10 +1,11 @@
+a {
+  color: rgba(0, 0, 0, 0.7); }
+  @media screen and (min-width: 768px) {
+    a:before {
+      background: rgba(240, 20, 50, 0.7); } }
+
 body {
   background: rgba(240, 240, 199, 0.5); }
-  body a {
-    color: rgba(0, 0, 0, 0.7); }
-    @media screen and (min-width: 768px) {
-      body a:before {
-        background: rgba(240, 20, 50, 0.7); } }
   body #back-to-top {
     color: #fff; }
     @media screen and (min-width: 768px) {

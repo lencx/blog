@@ -232,32 +232,22 @@ h6 {
   padding: 16px;
   box-shadow: inset 0 0 25px rgba(255, 150, 50, 0.3); }
 
-.article-container article h1, .post-content h1 {
-  color: #c9951d;
-  font-family: "Shrikhand";
+.article-container article .post-title, .post-content .post-title {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.4), 1px -1px 1px rgba(0, 50, 50, 0.3), -1px 1px 2px rgba(180, 120, 30, 0.8); }
 
-.article-container article h2, .post-content h2 {
-  color: #84c91d;
-  font-family: "Shrikhand";
+.article-container article .post-excerpt h1, .post-content .post-excerpt h1, .article-container article .post-conent h1, .post-content .post-conent h1 {
+  color: #24292e; }
+
+.article-container article .post-excerpt h2, .post-content .post-excerpt h2, .article-container article .post-conent h2, .post-content .post-conent h2 {
+  color: #083d77; }
+
+.article-container article .post-excerpt h1, .post-content .post-excerpt h1, .article-container article .post-excerpt h2, .post-content .post-excerpt h2, .article-container article .post-conent h1, .post-content .post-conent h1, .article-container article .post-conent h2, .post-content .post-conent h2 {
+  border-left: solid 10px rgba(130, 101, 43, 0.8);
+  padding-left: 12px;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.4), 1px -1px 1px rgba(0, 50, 50, 0.3), -1px 1px 2px rgba(180, 120, 30, 0.8); }
 
-.article-container article h3, .post-content h3 {
-  color: #1dc92e;
-  font-family: "Shrikhand";
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.4), 1px -1px 1px rgba(0, 50, 50, 0.3), -1px 1px 2px rgba(180, 120, 30, 0.8); }
-
-.article-container article h4, .post-content h4 {
-  color: #1dc9a6;
-  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.4); }
-
-.article-container article h5, .post-content h5 {
-  color: #1d73c9;
-  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.4); }
-
-.article-container article h6, .post-content h6 {
-  color: #3f1dc9;
-  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.4); }
+.article-container article .post-excerpt h3, .post-content .post-excerpt h3, .article-container article .post-excerpt h4, .post-content .post-excerpt h4, .article-container article .post-excerpt h5, .post-content .post-excerpt h5, .article-container article .post-excerpt h6, .post-content .post-excerpt h6, .article-container article .post-conent h3, .post-content .post-conent h3, .article-container article .post-conent h4, .post-content .post-conent h4, .article-container article .post-conent h5, .post-content .post-conent h5, .article-container article .post-conent h6, .post-content .post-conent h6 {
+  color: #004e64; }
 
 .tags-list ul.tags .tag-item .post-meta, .post-category .category li .date {
   margin-right: 10px;
@@ -281,6 +271,7 @@ article, .page {
   article code, .page code {
     background: #fac;
     padding: 1px 5px;
+    border-radius: 5px;
     color: rgba(90, 60, 50, 0.8); }
   article em, .page em {
     font-family: "Handlee"; }
@@ -331,6 +322,7 @@ article, .page {
     article table th, article table td, .page table th, .page table td {
       padding: 5px;
       text-align: center;
+      border-radius: 3px;
       box-shadow: inset 0 0 5px rgba(0, 50, 50, 0.4); }
     article table tr:nth-child(2n), .page table tr:nth-child(2n) {
       background-color: #f1f1c1 !important; }
@@ -345,7 +337,10 @@ article, .page {
   article img, .page img {
     display: block;
     max-width: 100%;
-    height: auto; }
+    border-radius: 10px;
+    height: auto;
+    margin: 5px 0;
+    border: solid 3px rgba(140, 140, 140, 0.3); }
 
 /**
 * part 
@@ -1306,7 +1301,10 @@ header {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        max-width: 200px; } }
+        max-width: 200px; }
+        .pagination .prev-post:hover,
+        .pagination .next-post:hover {
+          border-radius: 10px; } }
     .pagination .prev-post i,
     .pagination .next-post i {
       position: absolute;
@@ -1344,7 +1342,7 @@ figure .code-theme {
   user-select: none; }
   @media screen and (min-width: 768px) {
     figure .code-theme:hover {
-      color: rgba(0, 120, 30, 0.8);
+      color: rgba(20, 50, 220, 0.8);
       background: rgba(255, 100, 50, 0.5);
       box-shadow: 0 2px 5px rgba(255, 125, 25, 0.5), 1px 0 5px rgba(255, 125, 25, 0.5), -1px 0 5px rgba(255, 125, 25, 0.5); } }
 
@@ -1367,7 +1365,7 @@ figure.black {
     color: #fff; }
     @media screen and (min-width: 768px) {
       figure.black .code-theme:hover {
-        color: rgba(250, 180, 130, 0.8);
+        color: rgba(20, 50, 220, 0.8);
         background: rgba(255, 180, 50, 0.5);
         box-shadow: 0 2px 5px rgba(255, 125, 25, 0.5), 1px 0 5px rgba(255, 125, 25, 0.5), -1px 0 5px rgba(255, 125, 25, 0.5); } }
 
@@ -1379,7 +1377,7 @@ figure {
   padding-top: 28px;
   margin: 10px 0; }
   figure:before {
-    color: rgba(100, 100, 100, 0.1) !important; }
+    color: rgba(10, 10, 100, 0.8) !important; }
   figure table tr {
     background: rgba(255, 255, 240, 0.2) !important; }
   figure .gutter {
@@ -1794,7 +1792,7 @@ figure.plain:before {
 
 @media screen and (max-width: 575px) {
   .post-conent {
-    padding: 12px; } }
+    padding: 16px; } }
 
 .post-toc {
   max-width: 260px;
