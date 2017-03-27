@@ -186,6 +186,10 @@ body {
     color: rgba(200, 100, 200, 0.8); }
   body .article-container .post-meta .date, body .post-content .post-meta .date {
     color: rgba(0, 0, 0, 0.3); }
+  body .article-container .post-meta .updated, body .post-content .post-meta .updated {
+    color: rgba(13, 98, 209, 0.8); }
+  body .tags-list .updated, body .post-category .updated {
+    color: rgba(13, 98, 209, 0.8); }
   body .post-toc {
     background: rgba(245, 135, 10, 0.3);
     box-shadow: inset 0 0 15px rgba(255, 100, 80, 0.6); }

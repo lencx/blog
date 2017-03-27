@@ -1012,7 +1012,7 @@ header {
       header ul.menus li a {
         padding: 5px; }
   header .search {
-    float: right;
+    display: none;
     margin: 15px; }
     header .search input[type='search'] {
       top: 15px;
@@ -1253,6 +1253,12 @@ header {
 .article-container .post-meta .date,
 .post-content .post-meta .date {
   font-family: "Handlee"; }
+
+.tags-list .updated .fa {
+  margin: 0 8px; }
+
+.post-category li .fa:before {
+  margin-right: 5px; }
 
 .pagination {
   text-align: center;

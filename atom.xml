@@ -103,7 +103,7 @@
     <link href="https://lencx.github.io/blog/2017/03/24/git-basics/"/>
     <id>https://lencx.github.io/blog/2017/03/24/git-basics/</id>
     <published>2017-03-24T07:05:00.000Z</published>
-    <updated>2017-03-26T16:32:27.000Z</updated>
+    <updated>2017-03-27T17:03:12.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="File-status-lifecycle"><a href="#File-status-lifecycle" class="headerlink" title="File status lifecycle"></a>File status lifecycle</h2><blockquote>
 <p>文件状态的生命周期<br><img src="/blog/images/git/git-file-status.png" alt="file status"></p>
@@ -131,10 +131,16 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[user]</div><div class="line">      name = Len</div><div class="line">      email = cxin1314@gmail.com</div><div class="line">[alias]</div><div class="line">      st = status</div><div class="line">      ci = commit</div><div class="line">      co = checkout</div><div class="line">      br = branch</div><div class="line">      df = diff</div><div class="line">      lg = log --color --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit</div><div class="line">      last = log --color --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit -1 HEAD</div><div class="line">[core]</div><div class="line">      editor = emacs</div></pre></td></tr></table></figure>
 <h2 id="Snapshot"><a href="#Snapshot" class="headerlink" title="Snapshot"></a>Snapshot</h2><blockquote>
-<p>git 是基于快照的，即文件改变，将该文件全部进行保存，<code>blob</code>值改变，该文件所属的目录<code>tree</code>值也改变<br>tree: 目录(dir)<br>blob: 文件(file)</p>
+<p>git 是基于快照的，即文件改变，将该文件全部进行保存，<code>blob</code>改变，该文件所属的目录<code>tree</code>也改变<br>tree: 目录(dir)<br>blob: 文件(file)</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> .git/objects</div><div class="line">git cat-file -p &lt;SHA-1&gt;</div></pre></td></tr></table></figure>
 <p><img src="/blog/images/git/git-hash-1.png" alt="git hash 1"><br><img src="/blog/images/git/git-hash-2.png" alt="git hash 2"><br><img src="/blog/images/git/git-hash-3.png" alt="git hash 3"><br><img src="/blog/images/git/git-hash-4.png" alt="git hash 4"></p>
+<blockquote>
+<p>从以上的操作可以总结出如下的结论：<br><img src="/blog/images/git/git-snapshot.png" alt="git snapshot"><br><img src="/blog/images/git/git-branch.png" alt="git branch"></p>
+</blockquote>
+<h2 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h2><blockquote>
+<p>分支创建与删除<br>只需要将<code>master</code>文件中的内容重新复制到新文件中，即创建了一条新的分支，删除分支只需删除该文件即可。<br><img src="/blog/images/git/git-branch-2.png" alt="git branch"><br>分支切换原理：修改<code>HEAD</code>文件<br><img src="/blog/images/git/git-checkout-branch.png" alt="git branch checkout"><br><img src="/blog/images/git/git-branch-master.png" alt="git branch master"></p>
+</blockquote>
 <h2 id="Undoing-Things"><a href="#Undoing-Things" class="headerlink" title="Undoing Things"></a>Undoing Things</h2><blockquote>
 <p>撤销<br><strong>⚠️： <code>git checkout --</code> is dangerous. May be <code>git stash</code> is better.</strong></p>
 </blockquote>
@@ -143,16 +149,16 @@
     
     <summary type="html">
     
-      git basics 111
+      git basics
     
     </summary>
     
       <category term="git" scheme="https://lencx.github.io/blog/categories/git/"/>
     
     
-      <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
-    
       <category term="command" scheme="https://lencx.github.io/blog/tags/command/"/>
+    
+      <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
     
       <category term="git" scheme="https://lencx.github.io/blog/tags/git/"/>
     
@@ -188,7 +194,7 @@
     <link href="https://lencx.github.io/blog/2017/03/20/hexo-theme-lencx/"/>
     <id>https://lencx.github.io/blog/2017/03/20/hexo-theme-lencx/</id>
     <published>2017-03-20T01:42:15.000Z</published>
-    <updated>2017-03-25T16:20:41.000Z</updated>
+    <updated>2017-03-27T11:13:55.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><blockquote>
 <p>描述</p>
@@ -346,7 +352,7 @@
 </li>
 <li><p>Comment</p>
 <blockquote>
-<p>评论</p>
+<p>评论<br><img src="/blog/images/hexo/hexo-disqus.png" alt="hexo disqus"></p>
 </blockquote>
 <ul>
 <li>DISQUS<blockquote>
@@ -368,7 +374,18 @@
 </li>
 </ul>
 <h2 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h2><blockquote>
-<p>社区帐号<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attr">social:</span></div><div class="line"><span class="attr">  github:</span> your@github</div><div class="line"><span class="attr">  email:</span> your@email.com</div><div class="line"><span class="attr">  facebook:</span> your@facebook.com</div><div class="line"><span class="attr">  twitter:</span> your@twitter.com</div><div class="line"><span class="attr">  stact_overflow:</span></div></pre></td></tr></table></figure></p>
+<p>社区帐号<br><img src="/blog/images/hexo/hexo-rss.png" alt="hexo rss"><br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attr">social:</span></div><div class="line"><span class="attr">  github:</span> your@github</div><div class="line"><span class="attr">  email:</span> your@email.com</div><div class="line"><span class="attr">  facebook:</span> your@facebook.com</div><div class="line"><span class="attr">  twitter:</span> your@twitter.com</div><div class="line"><span class="attr">  stact_overflow:</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h2><blockquote>
+<p>RSS订阅 在根目录下安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i hexo-generator-feed --save</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># https://github.com/hexojs/hexo-generator-feed</span></div><div class="line"><span class="attr">feed:</span></div><div class="line"><span class="attr">  type:</span> atom</div><div class="line"><span class="attr">  path:</span> atom.xml</div><div class="line">  <span class="comment"># 0/false[all] | number</span></div><div class="line"><span class="attr">  limit:</span> <span class="literal">false</span></div><div class="line">  <span class="comment"># hub:</span></div><div class="line"><span class="attr">  content:</span> <span class="literal">true</span></div></pre></td></tr></table></figure>
+<h2 id="Keywords-amp-amp-description"><a href="#Keywords-amp-amp-description" class="headerlink" title="Keywords &amp;&amp; description"></a>Keywords &amp;&amp; description</h2><blockquote>
+<p>关键字及描述</p>
+<ul>
+<li>在 <strong>root _config.yml</strong>中的<code>description</code>为网站描述</li>
+<li>post中的描述及关键字则需要自己在模版中进行添加，模板路径为<code>/scaffolds／post.md</code>,多个关键字用半角英文逗号隔开，如果未使用<code>keywords</code>，默认将<code>tags</code>填充为关键字<br><img src="/blog/images/hexo/hexo-scaffolds-post.png" alt="scaffolds post"></li>
+</ul>
 </blockquote>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><blockquote>
 <p>结束语</p>
