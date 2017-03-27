@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lencx&#39;s blog</title>
+  
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="https://lencx.github.io/blog/"/>
+  <updated>2017-03-25T15:56:06.000Z</updated>
+  <id>https://lencx.github.io/blog/</id>
+  
+  <author>
+    <name>Len C...</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS Console</title>
+    <link href="https://lencx.github.io/blog/2017/03/25/js-console/"/>
+    <id>https://lencx.github.io/blog/2017/03/25/js-console/</id>
+    <published>2017-03-25T05:27:58.000Z</published>
+    <updated>2017-03-25T15:56:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="log-info"><a href="#log-info" class="headerlink" title="log(), info()"></a>log(), info()</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>)</div><div class="line"><span class="comment">// 可接受多个参数</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="number">1</span>, <span class="number">2</span>)</div></pre></td></tr></table></figure>
+<h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><table>
+<thead>
+<tr>
+<th>占位符</th>
+<th>符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字符</td>
+<td>%s</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>%c</td>
+</tr>
+<tr>
+<td>整数</td>
+<td>%d / %i</td>
+</tr>
+<tr>
+<td>浮点数</td>
+<td>%f</td>
+</tr>
+<tr>
+<td>对象</td>
+<td>%o</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠️：不同格式数据必须使用对应格式的占位符</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// %s</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'%s + %s = %s'</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span>) <span class="comment">// 2 + 3 = 6</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'%s is red'</span>, <span class="string">'#f00'</span>) <span class="comment">// #f00 is red</span></div><div class="line"><span class="comment">// %c</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'%chello, world'</span>, <span class="string">'color:blue;background:yellow;font-size:36px;'</span>)</div></pre></td></tr></table></figure>
+<p><img src="/blog/images/js/console-css.png" alt="信息分组"></p>
+<hr>
+<h2 id="group"><a href="#group" class="headerlink" title="group()"></a>group()</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.group();</div></pre></td></tr></table></figure>
+<p><img src="/blog/images/js/console-group.png" alt="信息分组"></p>
+<h2 id="warn-error"><a href="#warn-error" class="headerlink" title="warn(), error()"></a>warn(), error()</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 警告</span></div><div class="line"><span class="built_in">console</span>.warn()</div><div class="line"><span class="comment">// 出错</span></div><div class="line"><span class="built_in">console</span>.error()</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;log-info&quot;&gt;&lt;a href=&quot;#log-info&quot; class=&quot;headerlink&quot; title=&quot;log(), info()&quot;&gt;&lt;/a&gt;log(), info()&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr
+    
+    </summary>
+    
+      <category term="js" scheme="https://lencx.github.io/blog/categories/js/"/>
+    
+    
+      <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
+    
+      <category term="console" scheme="https://lencx.github.io/blog/tags/console/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac command</title>
+    <link href="https://lencx.github.io/blog/2017/03/24/command/"/>
+    <id>https://lencx.github.io/blog/2017/03/24/command/</id>
+    <published>2017-03-24T15:30:19.000Z</published>
+    <updated>2017-03-25T16:02:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd\ # 直接返回到用户根路径</span></div><div class="line"><span class="built_in">cd</span></div><div class="line"><span class="comment"># ls -a 查看隐藏文件</span></div><div class="line">ls</div><div class="line"><span class="comment"># 创建文件</span></div><div class="line">touch &lt;filename&gt;</div><div class="line"><span class="comment"># 删除文件</span></div><div class="line">rm -rf</div><div class="line"><span class="comment"># 重命名文件</span></div><div class="line">mv &lt;old filename&gt; &lt;new filename&gt;</div><div class="line"><span class="comment"># 文件追加内容</span></div><div class="line"><span class="comment"># echo "msg" &gt;&gt; &lt;filename&gt;</span></div><div class="line"><span class="built_in">echo</span></div><div class="line"><span class="comment"># used to format and display the man pages</span></div><div class="line">man</div><div class="line"><span class="comment"># 查看文件内容</span></div><div class="line">cat &lt;filename&gt;</div><div class="line"><span class="comment"># 列出mac下所有的shell类型</span></div><div class="line"><span class="comment">## /bin/bash /bin/csh /bin/ksh /bin/sh /bin/tcsh /bin/zsh</span></div><div class="line">ls /bin/*</div><div class="line"><span class="comment">## 当前使用的shell类型</span></div><div class="line"><span class="built_in">echo</span> <span class="variable">$SHELL</span></div><div class="line"><span class="comment"># 选择shell类型</span></div><div class="line">chsh <span class="_">-s</span> /bin/zsh</div><div class="line">$(<span class="built_in">which</span> /bin/bash)</div><div class="line"><span class="comment"># 当前路径</span></div><div class="line"><span class="built_in">pwd</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
+    
+    </summary>
+    
+      <category term="bash" scheme="https://lencx.github.io/blog/categories/bash/"/>
+    
+    
+      <category term="command" scheme="https://lencx.github.io/blog/tags/command/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Basics</title>
+    <link href="https://lencx.github.io/blog/2017/03/24/git-basics/"/>
+    <id>https://lencx.github.io/blog/2017/03/24/git-basics/</id>
+    <published>2017-03-24T07:05:00.000Z</published>
+    <updated>2017-03-26T16:32:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="File-status-lifecycle"><a href="#File-status-lifecycle" class="headerlink" title="File status lifecycle"></a>File status lifecycle</h2><blockquote>
+<p>文件状态的生命周期<br><img src="/blog/images/git/git-file-status.png" alt="file status"></p>
+</blockquote>
+<h2 id="Basics-command"><a href="#Basics-command" class="headerlink" title="Basics command"></a>Basics command</h2><blockquote>
+<p>基础命令</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Getting started</span></div><div class="line">git config --global user.name <span class="string">"your name"</span></div><div class="line">git config --global user.email <span class="string">"your@email"</span></div><div class="line"></div><div class="line"><span class="comment"># initializes a directory as a git repository</span></div><div class="line">git init</div><div class="line"><span class="comment"># view the status of your files in the working directory and staging area</span></div><div class="line">git status</div><div class="line"><span class="comment"># adds file contents to the staging area</span></div><div class="line"><span class="comment">## git add -A</span></div><div class="line"><span class="comment">## or </span></div><div class="line"><span class="comment">## git add .</span></div><div class="line">git add</div><div class="line"><span class="comment"># shows diff of what is staged and what is modified but unstaged</span></div><div class="line"><span class="comment">## git diff --staged # 查看暂存区变化</span></div><div class="line">git diff</div><div class="line"><span class="comment"># records a snapshot of the staging area</span></div><div class="line"><span class="comment"># git commit -m "msg"</span></div><div class="line">git commit</div><div class="line"><span class="comment"># add &amp; commit 合二为一， 前提是必须正常提交过一次才能使用</span></div><div class="line">git commit <span class="_">-a</span> -m <span class="string">"msg"</span></div><div class="line"><span class="comment"># remove files from the staging area</span></div><div class="line"><span class="comment">## git rm &lt;file name&gt; # 从暂存区将文件移除</span></div><div class="line">git rm</div><div class="line"><span class="comment"># git rm --cached orig; mv orig new; git add new</span></div><div class="line"><span class="comment">## git mv &lt;old filename&gt; &lt;new filename&gt; # staging area changed</span></div><div class="line">git mv</div><div class="line"><span class="comment"># show commit history of a branch</span></div><div class="line">git <span class="built_in">log</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Working-with-remotes"><a href="#Working-with-remotes" class="headerlink" title="Working with remotes"></a>Working with remotes</h2><blockquote>
+<p>远端</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># copy a git repository</span></div><div class="line">git <span class="built_in">clone</span> URL</div><div class="line"><span class="comment"># list, add and delete remote repository aliases</span></div><div class="line">git remote</div><div class="line"><span class="comment"># download new brabches and data from a remote repository</span></div><div class="line">git fetch</div><div class="line"><span class="comment"># merge a bash context into your current one</span></div><div class="line">git merge</div><div class="line"><span class="comment"># fetch from a remote repo and try to merge into the current branch</span></div><div class="line">git pull</div><div class="line"><span class="comment"># push your new branches and data to a remote repository</span></div><div class="line">git push</div></pre></td></tr></table></figure>
+<h2 id="Taging"><a href="#Taging" class="headerlink" title="Taging"></a>Taging</h2><blockquote>
+<p>标签</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># listing tags</span></div><div class="line">git tag</div><div class="line"><span class="comment"># create tag</span></div><div class="line">git tag <span class="_">-a</span> v1.0 -m <span class="string">"my version 1.0"</span></div><div class="line"><span class="comment"># showing tag data along with commit</span></div><div class="line">git show v1.0</div><div class="line"><span class="comment"># tagging later</span></div><div class="line">git tag <span class="_">-a</span> v0.9 -m <span class="string">"version 0.9"</span> [commit]</div><div class="line"><span class="comment"># sharing tags</span></div><div class="line">git push origin [tagname]</div></pre></td></tr></table></figure>
+<h2 id="Git-configuration-file"><a href="#Git-configuration-file" class="headerlink" title="Git configuration file"></a>Git configuration file</h2><blockquote>
+<p>git配置文件： <code>~/.gitconfig(or ~/.config/git/config)</code></p>
+<ul>
+<li>user[用户]</li>
+<li>alias[别名]</li>
+<li>core.editor[核心编辑器]</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[user]</div><div class="line">      name = Len</div><div class="line">      email = cxin1314@gmail.com</div><div class="line">[alias]</div><div class="line">      st = status</div><div class="line">      ci = commit</div><div class="line">      co = checkout</div><div class="line">      br = branch</div><div class="line">      df = diff</div><div class="line">      lg = log --color --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit</div><div class="line">      last = log --color --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit -1 HEAD</div><div class="line">[core]</div><div class="line">      editor = emacs</div></pre></td></tr></table></figure>
+<h2 id="Snapshot"><a href="#Snapshot" class="headerlink" title="Snapshot"></a>Snapshot</h2><blockquote>
+<p>git 是基于快照的，即文件改变，将该文件全部进行保存，<code>blob</code>值改变，该文件所属的目录<code>tree</code>值也改变<br>tree: 目录(dir)<br>blob: 文件(file)</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> .git/objects</div><div class="line">git cat-file -p &lt;SHA-1&gt;</div></pre></td></tr></table></figure>
+<p><img src="/blog/images/git/git-hash-1.png" alt="git hash 1"><br><img src="/blog/images/git/git-hash-2.png" alt="git hash 2"><br><img src="/blog/images/git/git-hash-3.png" alt="git hash 3"><br><img src="/blog/images/git/git-hash-4.png" alt="git hash 4"></p>
+<h2 id="Undoing-Things"><a href="#Undoing-Things" class="headerlink" title="Undoing Things"></a>Undoing Things</h2><blockquote>
+<p>撤销<br><strong>⚠️： <code>git checkout --</code> is dangerous. May be <code>git stash</code> is better.</strong></p>
+</blockquote>
+<p><img src="/blog/images/git/git-undoing.png" alt="git undoing"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      git basics 111
+    
+    </summary>
+    
+      <category term="git" scheme="https://lencx.github.io/blog/categories/git/"/>
+    
+    
+      <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
+    
+      <category term="command" scheme="https://lencx.github.io/blog/tags/command/"/>
+    
+      <category term="git" scheme="https://lencx.github.io/blog/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo常见问题汇总</title>
+    <link href="https://lencx.github.io/blog/2017/03/22/hexo-post/"/>
+    <id>https://lencx.github.io/blog/2017/03/22/hexo-post/</id>
+    <published>2017-03-22T10:36:34.000Z</published>
+    <updated>2017-03-25T16:25:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建一篇文章</span></div><div class="line"><span class="comment"># hexo new post &lt;your-post-title&gt;</span></div><div class="line">hexo new &lt;your-post-title&gt;</div><div class="line"><span class="comment"># 创建一个页面</span></div><div class="line">hexo new page &lt;your-page-name&gt;</div></pre></td></tr></table></figure>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo init <span class="comment"># 初始化</span></div><div class="line">hexo clean <span class="comment"># 删除生成的文件和缓存</span></div><div class="line">hexo g <span class="comment"># 生成静态文件</span></div><div class="line">hexo s <span class="comment"># 启动服务，可以在本地预览</span></div><div class="line">hexo d <span class="comment"># 部署</span></div></pre></td></tr></table></figure>
+<h2 id="git部署"><a href="#git部署" class="headerlink" title="git部署"></a>git部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 如果未安装hexo-deployer-git</span></div><div class="line">npm install hexo-deployer-git --save</div><div class="line"></div><div class="line"><span class="comment"># 从远端克隆 .deploy_git 目录</span></div><div class="line">git <span class="built_in">clone</span> &lt;gh-pages repo&gt; .deploy_git</div><div class="line"><span class="comment"># 删除 .deploy_git</span></div><div class="line">rm -rf .deploy_git</div></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span> &lt;repository url<span class="string">&gt;</span></div><div class="line"><span class="attr">  branch:</span> [branch] <span class="comment">#master</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写作&quot;&gt;&lt;a href=&quot;#写作&quot; class=&quot;headerlink&quot; title=&quot;写作&quot;&gt;&lt;/a&gt;写作&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div cl
+    
+    </summary>
+    
+      <category term="hexo" scheme="https://lencx.github.io/blog/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://lencx.github.io/blog/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-lencx</title>
+    <link href="https://lencx.github.io/blog/2017/03/20/hexo-theme-lencx/"/>
+    <id>https://lencx.github.io/blog/2017/03/20/hexo-theme-lencx/</id>
+    <published>2017-03-20T01:42:15.000Z</published>
+    <updated>2017-03-25T16:20:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><blockquote>
+<p>描述</p>
+<blockquote>
+<p>本主题使用<code>pug[jade]</code>, <code>sass</code>编写，可用<a href="https://webpack.js.org/" target="_blank" rel="external">webpack</a>对<code>css</code>，<code>js</code>进行压缩。之所以选择<code>pug</code>是因为觉得这种模板语法很优雅（用缩进表示DOM结构，很简洁, 逻辑采用js的语法，作为前端表示无压力， <code>include</code>, <code>block</code>, <code>mixins</code> etc. 用起来也很方便。 具体语法可以参考<a href="https://pugjs.org/language/mixins.html" target="_blank" rel="external">Pug API</a>，<a href="http://sass-lang.com/" target="_blank" rel="external">Sass API</a>）。本主题支持响应式，未借助第三方库，如想使用栅格系统，在<code>／source/css/part/_grid.scss</code>中有一个简易版的bootstrap栅格,未build的scss源文件文件可参考<a href="https://github.com/lencx/bs-grid" target="_blank" rel="external">bs-grid</a>。或者使用<code>postcss</code>的插件库<code>lost</code>, <code>postcss-cssnext</code> etc. 进行编写。了解更多信息，请参考<a href="https://github.com/postcss/postcss" target="_blank" rel="external">postcss</a>。</p>
+</blockquote>
+</blockquote>
+<a id="more"></a>
+<h2 id="Install-plugins"><a href="#Install-plugins" class="headerlink" title="Install plugins"></a>Install plugins</h2><blockquote>
+<p>使用本主题需要安装的依赖, 在根目录进行安装</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-renderer-pug hexo-renderer-sass --save</div></pre></td></tr></table></figure>
+<h2 id="Create-categories-tags-and-about-page"><a href="#Create-categories-tags-and-about-page" class="headerlink" title="Create categories, tags and about page"></a>Create categories, tags and about page</h2><blockquote>
+<p>创建分类页与标签页<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># categories页面</span></div><div class="line">hexo new page categories</div><div class="line"><span class="comment"># tags页面</span></div><div class="line">hexo new page tags</div><div class="line"><span class="comment"># about页面</span></div><div class="line">hexo new page about</div></pre></td></tr></table></figure></p>
+<p><strong>⚠️ ：</strong> categories与tags页面创建后无需编辑</p>
+</blockquote>
+<h2 id="主题设置及特性（Theme-Setting-and-Features）"><a href="#主题设置及特性（Theme-Setting-and-Features）" class="headerlink" title="主题设置及特性（Theme Setting and Features）"></a>主题设置及特性（Theme Setting and Features）</h2><h3 id="Navigation-menu"><a href="#Navigation-menu" class="headerlink" title="Navigation(menu)"></a>Navigation(menu)</h3><blockquote>
+<p>菜单</p>
+<blockquote>
+<ul>
+<li>窗口宽度小于768px时，菜单折叠</li>
+<li>当垂直滚动超过500px时，header会在一秒内消失。回滚时又在800ms内显示出来（呃，你若问我八百毫秒什么概念，我也不知道，自己滚滚就知道了。重在体验…😉 ）</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="Archives"><a href="#Archives" class="headerlink" title="Archives"></a>Archives</h3><blockquote>
+<p>归档页</p>
+<blockquote>
+<p>点击年份可折叠, 月份左上角显示本月文章数量<br><strong>⚠️ ：</strong>比较重要的一条，想要实现我图中的一长条不间断的显示，而不产生分页。请将根目录中<code>_config.yml</code>的 <code>archive_generator: per_page</code>值设大一点，为了免去麻烦，省的哪天再超了，我一次性设置了10000，虽然我这辈子都写不出来这么多，哈哈，就是任性。你要是不想任性，可以先设个几百条。</p>
+</blockquote>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">archive_generator:</span></div><div class="line"><span class="attr">  per_page:</span> <span class="number">10000</span></div></pre></td></tr></table></figure>
+<ol>
+<li><p>关闭状态</p>
+<ul>
+<li><img src="/blog/images/hexo/hexo-archives-off.png" alt="archives off"></li>
+</ul>
+</li>
+<li><p>打开状态</p>
+<ul>
+<li><img src="/blog/images/hexo/hexo-archives-on.png" alt="archives on"></li>
+</ul>
+</li>
+</ol>
+<h3 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h3><blockquote>
+<p>分类页</p>
+<blockquote>
+<p>稀松平常，没啥好说的，本主题大量使用了文本阴影效果，不知会不会适得其反 🤔 。</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><img src="/blog/images/hexo/hexo-categories.png" alt="categories"></li>
+</ul>
+<h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><blockquote>
+<p>标签页</p>
+<blockquote>
+<p>偷偷告诉你，不光是这里的标签，在文章中的标签同样可以改变颜色， 角度啥的。（若不信，多刷新几次浏览器 😜 ）<br><strong>⚠️ ：</strong>这里同样有一个设置，不过不是针对<code>menu</code>中的tags设定的，而是从sidebar中的tagCloud点击跳转过来的当前tag的显示数量。值写小了，无外乎就是一个标签多分几页，看个人喜好，自行设定。此配置也是在根目录下的_config.yml文件中进行设置。</p>
+</blockquote>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">tag_generator:</span></div><div class="line"><span class="attr">  per_page:</span> <span class="number">20</span></div></pre></td></tr></table></figure>
+<ul>
+<li>random box shadow</li>
+<li>random border-radius</li>
+<li>random font color</li>
+<li>random vertical position<ul>
+<li>随机1<img src="/blog/images/hexo/hexo-tags-1.png" alt="tags 1"></li>
+<li>随机2<img src="/blog/images/hexo/hexo-tags-2.png" alt="tags 2"></li>
+</ul>
+</li>
+</ul>
+<h3 id="Back-To-Top"><a href="#Back-To-Top" class="headerlink" title="Back To Top"></a>Back To Top</h3><blockquote>
+<p>回到顶部按钮</p>
+<ul>
+<li>当垂直滚动超过300px时，按钮出现。小于300px消失</li>
+</ul>
+</blockquote>
+<h3 id="Posts-List"><a href="#Posts-List" class="headerlink" title="Posts List"></a>Posts List</h3><blockquote>
+<p>首页文章列表</p>
+</blockquote>
+<p>每页显示的文章数，需在根目录中的<code>/_config.yml</code>中进行设置<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Pagination</span></div><div class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></div><div class="line"><span class="attr">per_page:</span> <span class="number">8</span></div></pre></td></tr></table></figure></p>
+<h3 id="Sidebar"><a href="#Sidebar" class="headerlink" title="Sidebar"></a>Sidebar</h3><blockquote>
+<p>侧栏</p>
+<blockquote>
+<p>窗口宽度小于992px，侧栏隐藏</p>
+</blockquote>
+</blockquote>
+<p>与sidebar有关的配置项，文件路径<code>/theme/_config.yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="attr">sidebar:</span></div><div class="line"><span class="attr">  tagCloud:</span></div><div class="line">    <span class="comment"># 是否开启标签云</span></div><div class="line"><span class="attr">    enable:</span> <span class="literal">true</span></div><div class="line">    <span class="comment"># 是否开启背景（可用图片或直接设置背景色）</span></div><div class="line"><span class="attr">    bgEnable:</span> <span class="literal">true</span></div><div class="line">    <span class="comment"># bg: '#000'</span></div><div class="line">    <span class="comment"># '/blog' 是项目的根路径 默认跟路径是'／'，具体是啥请看根目录中_config.yml的root配置项</span></div><div class="line"><span class="attr">    bg:</span> url(<span class="string">'/blog/img/bg-1.png'</span>)</div><div class="line">  <span class="comment"># 是否开启归档</span></div><div class="line"><span class="attr">  archives:</span> <span class="literal">true</span></div><div class="line">  <span class="comment"># 是否开启分类</span></div><div class="line"><span class="attr">  categories:</span> <span class="literal">true</span></div><div class="line">  <span class="comment"># 最新文章</span></div><div class="line"><span class="attr">  recent_posts:</span></div><div class="line"><span class="attr">    enable:</span> <span class="literal">true</span> <span class="comment"># 是否开启</span></div><div class="line"><span class="attr">    num:</span> <span class="number">5</span> <span class="comment"># 条数</span></div></pre></td></tr></table></figure>
+<ol>
+<li>Tags Cloud<ul>
+<li>canvas<br><img src="/blog/images/hexo/hexo-sidebar-tagcloud.png" alt="sidebar tagCloud"></li>
+<li>random font color<blockquote>
+<p><strong>注：</strong>如需更改字体颜色，只能改源码了，我将随机色写入压缩后的js文件中，即<code>/theme/hexo-theme-lencx/libs/tagcanvas.min.js</code></p>
+</blockquote>
+</li>
+<li>font family, background color, text shadow etc.<blockquote>
+<p>可以在<code>/theme/hexo-theme-lencxs/libs/tagcloud.js</code>中更改</p>
+</blockquote>
+</li>
+<li>当然没事也可以换换背景啥的，也是👌 的。</li>
+</ul>
+</li>
+<li>Archives<ul>
+<li>锚点<blockquote>
+<p>点击某个月份链接跳转后定位到该月（该年份文章比较多时，此功能还比较实用 👍 ）</p>
+</blockquote>
+</li>
+<li>点击年份可折叠<blockquote>
+<p>一长坨看着就不舒服 ……^_^</p>
+</blockquote>
+</li>
+<li>括号中数字为该月的文章数</li>
+<li><img src="/blog/images/hexo/hexo-sidebar-archive.png" alt="sidebar archives"></li>
+</ul>
+</li>
+<li><p>Categories</p>
+<blockquote>
+<p>呃， 貌似没啥说的。😳</p>
+</blockquote>
+<ul>
+<li><img src="/blog/images/hexo/hexo-sidebar-category.png" alt="sidebar category"></li>
+</ul>
+</li>
+<li><p>Recent posts</p>
+<blockquote>
+<p>最新文章</p>
+</blockquote>
+<ul>
+<li>默认展示最新的<strong>5</strong>篇，可以在<code>/theme/_config.yml</code>中重新进行设定</li>
+<li><img src="/blog/images/hexo/hexo-sidebar-recent.png" alt="sidebar rencent posts"></li>
+</ul>
+</li>
+</ol>
+<h2 id="Post-Style"><a href="#Post-Style" class="headerlink" title="Post Style"></a>Post Style</h2><blockquote>
+<p>所有配置都在<code>/theme/_config.yml中</code></p>
+</blockquote>
+<ul>
+<li><p>Post meta</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># widget (文章小部件)</span></div><div class="line"><span class="comment"># true 开启</span></div><div class="line"><span class="comment"># false 关闭</span></div><div class="line"><span class="attr">postMeta:</span></div><div class="line"><span class="attr">  author:</span> <span class="literal">true</span> <span class="comment"># 作者</span></div><div class="line"><span class="attr">  date:</span> <span class="literal">true</span> <span class="comment"># 日期</span></div><div class="line"><span class="attr">  tags:</span> <span class="literal">true</span> <span class="comment"># 标签</span></div><div class="line"><span class="attr">  category:</span> <span class="literal">true</span> <span class="comment"># 分类</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>Code theme</p>
+<blockquote>
+<p>点击代码块右上角的theme[white|black]可看到效果</p>
+</blockquote>
+</li>
+<li><p>Post toc</p>
+<ul>
+<li>click toc title [folding | open]</li>
+<li>title setting<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">post:</span></div><div class="line">  <span class="comment"># 文章目录标题文字设置</span></div><div class="line"><span class="attr">  toc_title:</span> CONTENT</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Read more</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">post:</span></div><div class="line">  <span class="comment"># 阅读全文文字设置</span></div><div class="line"><span class="attr">  excerpt_link:</span> Read More</div></pre></td></tr></table></figure>
+</li>
+<li><p>Comment</p>
+<blockquote>
+<p>评论</p>
+</blockquote>
+<ul>
+<li>DISQUS<blockquote>
+<p>国内可能无法访问，如果使用该评论插件，我在<code>main.js</code>文件中做了一次判断，在3s内如果未加载，则显示<strong>Disqus due to network reasons, can not be loaded.</strong>，如果是因为网速不好，在大于3s后加载了，显示上可能会出现点小问题，但是如果是在10s内加载的，显示的问题还是会被移除掉。由于暂时没想到好的解决办法，该bug目前只能先这样，以后有好的办法再解决。但是如果不考虑网速问题。这个判断还是没什么问题的。即在3s内无法加载，则显示<strong>Disqus due to network reasons, can not be loaded.</strong>，否则正常加载Disqus</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">disqus:</span></div><div class="line"><span class="attr">  disqus_shortname:</span> lencx</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Theme-Config"><a href="#Theme-Config" class="headerlink" title="Theme Config"></a>Theme Config</h2><blockquote>
+<p>主题配色<br>在<code>/source/css/_theme.color.scss</code>文件中几乎包含了该主题的所有颜色变量（background, color, box-shadow, text-shadow）,在<code>／source/css/variable／_mixin.scss</code>文件中的@mixin radius 参数<code>$radius-enble</code>值为<code>true</code>时启用所有的圆角，<code>false</code>则关闭。</p>
+</blockquote>
+<h2 id="Analytics"><a href="#Analytics" class="headerlink" title="Analytics"></a>Analytics</h2><blockquote>
+<p>流量分析</p>
+</blockquote>
+<ul>
+<li>Google Analytics<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">analytics:</span></div><div class="line"><span class="attr">  google_analytics:</span> <span class="comment"># your Google AnalyticsId</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h2><blockquote>
+<p>社区帐号<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attr">social:</span></div><div class="line"><span class="attr">  github:</span> your@github</div><div class="line"><span class="attr">  email:</span> your@email.com</div><div class="line"><span class="attr">  facebook:</span> your@facebook.com</div><div class="line"><span class="attr">  twitter:</span> your@twitter.com</div><div class="line"><span class="attr">  stact_overflow:</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><blockquote>
+<p>结束语</p>
+<blockquote>
+<p>还有很多细节上的处理就只能靠自己慢慢发现了。<a href="https://github.com/lencx/hexo-theme-lencx" target="_blank" rel="external">hexo-theme-lencx</a>，本人会长期进行维护，哪天看着哪里不合眼了，还会修修补补，亦或大刀阔斧也说不准。 加点新鲜的，好玩的东东。时间有点仓促，还有很多功能还未添加，以后都会慢慢的加进来。</p>
+</blockquote>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;描述&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本主题使用&lt;code&gt;pug[jade]&lt;/code&gt;, &lt;code&gt;sass&lt;/code&gt;编写，可用&lt;a href=&quot;https://webpack.js.org/&quot;&gt;webpack&lt;/a&gt;对&lt;code&gt;css&lt;/code&gt;，&lt;code&gt;js&lt;/code&gt;进行压缩。之所以选择&lt;code&gt;pug&lt;/code&gt;是因为觉得这种模板语法很优雅（用缩进表示DOM结构，很简洁, 逻辑采用js的语法，作为前端表示无压力， &lt;code&gt;include&lt;/code&gt;, &lt;code&gt;block&lt;/code&gt;, &lt;code&gt;mixins&lt;/code&gt; etc. 用起来也很方便。 具体语法可以参考&lt;a href=&quot;https://pugjs.org/language/mixins.html&quot;&gt;Pug API&lt;/a&gt;，&lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass API&lt;/a&gt;）。本主题支持响应式，未借助第三方库，如想使用栅格系统，在&lt;code&gt;／source/css/part/_grid.scss&lt;/code&gt;中有一个简易版的bootstrap栅格,未build的scss源文件文件可参考&lt;a href=&quot;https://github.com/lencx/bs-grid&quot;&gt;bs-grid&lt;/a&gt;。或者使用&lt;code&gt;postcss&lt;/code&gt;的插件库&lt;code&gt;lost&lt;/code&gt;, &lt;code&gt;postcss-cssnext&lt;/code&gt; etc. 进行编写。了解更多信息，请参考&lt;a href=&quot;https://github.com/postcss/postcss&quot;&gt;postcss&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="https://lencx.github.io/blog/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://lencx.github.io/blog/tags/hexo/"/>
+    
+      <category term="theme" scheme="https://lencx.github.io/blog/tags/theme/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS之清除浮动</title>
+    <link href="https://lencx.github.io/blog/2016/05/04/css-clearfix/"/>
+    <id>https://lencx.github.io/blog/2016/05/04/css-clearfix/</id>
+    <published>2016-05-04T06:57:51.000Z</published>
+    <updated>2017-03-25T16:16:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>给元素设置浮动属性会使元素漂浮于普通文本流之上，导致元素内部不存在其他普通流元素，表现出的高度为0（高度塌陷，如果外层元素未给出具体高度，这时的盒子模型是不能自动计算出内部元素的实际高度）。<br><img src="/blog/images/css/css-clearfix.png" alt="清除浮动"></p>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">#wrap&#123;</div><div class="line">    background: red;</div><div class="line">    color: #ff3600;</div><div class="line">&#125;</div><div class="line">#wrap div&#123;</div><div class="line">    width: 400px;</div><div class="line">    background: green;</div><div class="line">    margin: 5px;</div><div class="line">    float: left;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wrap"</span> <span class="attr">class</span>=<span class="string">"clearfix"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div1"</span>&gt;</span>我是浮动div1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div2"</span>&gt;</span>我是浮动div2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ol>
+<li><p>在<code>id=&quot;wrap&quot;</code>的div中的末尾添加额外的标签如div，br，其他标签也可以，但必须是<strong>块级元素</strong>（两种方式）。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--使用div标签与其自身的html属性--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear: both"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--使用br标签与其自身的html属性--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">br</span> <span class="attr">clear</span>=<span class="string">"all"</span>/&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>id=&quot;wrap&quot;</code>的div属性中添加属性（两种方式）。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 父元素添加float,使其脱离普通文本流，盒子模型能够计算其实际的高度（不推荐使用）。 */</span></div><div class="line"><span class="selector-id">#wrap</span>&#123;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 父元素添加overflow */</span></div><div class="line"><span class="selector-id">#wrap</span>&#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>闭合浮动（闭合浮动原理——自行了解 <code>hasLayout</code> 和 <code>Block formatting contexts</code>）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">    <span class="attribute">content</span>: <span class="string">"."</span>;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">visibility</span>: hidden;</div><div class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 改进后的版本 */</span></div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">    <span class="attribute">content</span>: <span class="string">"200B"</span>;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 或者 */</span></div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</div><div class="line">    <span class="attribute">display</span>: table;</div><div class="line">    <span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span>&#123;</div><div class="line">    <span class="attribute">zoom</span>: <span class="number">1</span>;    <span class="comment">/*IE6/IE7*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>sass &amp; postcss</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/// placeholder: sass占位符</span></div><div class="line"><span class="comment">/// usage: @extend %clear-fix; </span></div><div class="line">%clearfix &#123;</div><div class="line">    &amp;:after &#123;</div><div class="line">        <span class="attribute">content</span>: <span class="string">''</span>;</div><div class="line">        <span class="attribute">display</span>: table;</div><div class="line">        <span class="attribute">clear</span>: both;</div><div class="line">        zoom: <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">/// postcss lost</span></div><div class="line">lost-utility: clearfix;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>注：</strong><del>这是之前写的一篇，之前的博客被我全部删掉了，现在重新开始。时间还是使用之前的创建时间，特此说明。</del></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;给元素设置浮动属性会使元素漂浮于普通文本流之上，导致元素内部不存在其他普通流元素，表现出的高度为0（高度塌陷，如果外层元素未给出具体高度，这时的盒子模型是不能自动计算出内部元素的实际高度）。&lt;br&gt;&lt;img src=&quot;/blog/images/css/css-clearfix.png&quot; alt=&quot;清除浮动&quot;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="CSS" scheme="https://lencx.github.io/blog/categories/CSS/"/>
+    
+    
+      <category term="clearfix" scheme="https://lencx.github.io/blog/tags/clearfix/"/>
+    
+      <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
+    
+  </entry>
+  
+</feed>

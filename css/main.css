@@ -1012,7 +1012,8 @@ header {
       header ul.menus li a {
         padding: 5px; }
   header .search {
-    display: none; }
+    float: right;
+    margin: 15px; }
     header .search input[type='search'] {
       top: 15px;
       width: 30px;
@@ -1111,10 +1112,12 @@ header {
           display: block;
           width: 100%; }
     header .search {
+      display: none;
       width: 100%;
       position: absolute;
       top: 62px;
-      padding: 5px 20px; }
+      padding: 5px 20px;
+      margin: 0; }
       header .search.active {
         display: block; } }
 
@@ -1136,6 +1139,8 @@ header {
   padding: 0 12px; }
   .page-about h1, .page-about h2 {
     font-family: "Shrikhand"; }
+  .page-about img {
+    border: none; }
   .page-about img[alt='len'] {
     float: right;
     margin-right: 50px; }
