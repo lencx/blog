@@ -103,7 +103,7 @@
     <link href="https://lencx.github.io/blog/2017/03/24/git-basics/"/>
     <id>https://lencx.github.io/blog/2017/03/24/git-basics/</id>
     <published>2017-03-24T07:05:00.000Z</published>
-    <updated>2017-03-27T17:03:12.000Z</updated>
+    <updated>2017-03-29T15:44:55.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="File-status-lifecycle"><a href="#File-status-lifecycle" class="headerlink" title="File status lifecycle"></a>File status lifecycle</h2><blockquote>
 <p>文件状态的生命周期<br><img src="/blog/images/git/git-file-status.png" alt="file status"></p>
@@ -120,7 +120,7 @@
 <h2 id="Taging"><a href="#Taging" class="headerlink" title="Taging"></a>Taging</h2><blockquote>
 <p>标签</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># listing tags</span></div><div class="line">git tag</div><div class="line"><span class="comment"># create tag</span></div><div class="line">git tag <span class="_">-a</span> v1.0 -m <span class="string">"my version 1.0"</span></div><div class="line"><span class="comment"># showing tag data along with commit</span></div><div class="line">git show v1.0</div><div class="line"><span class="comment"># tagging later</span></div><div class="line">git tag <span class="_">-a</span> v0.9 -m <span class="string">"version 0.9"</span> [commit]</div><div class="line"><span class="comment"># sharing tags</span></div><div class="line">git push origin [tagname]</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># listing tags</span></div><div class="line">git tag</div><div class="line"><span class="comment"># create tag</span></div><div class="line">git tag <span class="_">-a</span> v1.0 -m <span class="string">"my version 1.0"</span></div><div class="line"><span class="comment"># showing tag data along with commit</span></div><div class="line">git show v1.0</div><div class="line"><span class="comment"># tagging later</span></div><div class="line">git tag <span class="_">-a</span> v0.9 -m <span class="string">"version 0.9"</span> [commit]</div><div class="line"><span class="comment"># sharing tags</span></div><div class="line">git push origin [tagname]</div><div class="line"><span class="comment"># If you have a lot of tags that you want to push up at once.</span></div><div class="line"><span class="comment"># 一次推送多个tag</span></div><div class="line">git push origin --tags</div><div class="line"><span class="comment"># delete local tag</span></div><div class="line">git tag <span class="_">-d</span> [tagname]</div><div class="line"><span class="comment"># delete origin tag</span></div><div class="line">git push origin :refs/tags/[tagname]</div></pre></td></tr></table></figure>
 <h2 id="Git-configuration-file"><a href="#Git-configuration-file" class="headerlink" title="Git configuration file"></a>Git configuration file</h2><blockquote>
 <p>git配置文件： <code>~/.gitconfig(or ~/.config/git/config)</code></p>
 <ul>
@@ -141,10 +141,14 @@
 <h2 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h2><blockquote>
 <p>分支创建与删除<br>只需要将<code>master</code>文件中的内容重新复制到新文件中，即创建了一条新的分支，删除分支只需删除该文件即可。<br><img src="/blog/images/git/git-branch-2.png" alt="git branch"><br>分支切换原理：修改<code>HEAD</code>文件<br><img src="/blog/images/git/git-checkout-branch.png" alt="git branch checkout"><br><img src="/blog/images/git/git-branch-master.png" alt="git branch master"></p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># list, create and delete branches</span></div><div class="line">git branch -</div><div class="line"><span class="comment">## delete branch</span></div><div class="line">git branch <span class="_">-d</span> [branchname]</div><div class="line"><span class="comment">## forced to delete</span></div><div class="line">git branch -D [branchname]</div><div class="line"></div><div class="line"><span class="comment"># switch to a new branch context</span></div><div class="line">git checkout -</div><div class="line"><span class="comment">## create and switch branch</span></div><div class="line">git checkout -b [branchname]</div><div class="line"><span class="comment"># tracking remote branches</span></div><div class="line">git checkout --track origin/serverfix</div><div class="line">git checkout -b sf origin/serverfix</div><div class="line"></div><div class="line"><span class="comment"># merge a branch context into your current one</span></div><div class="line">git merge</div><div class="line"><span class="comment"># fast-forward merge</span></div><div class="line"><span class="comment"># fix conflict</span></div><div class="line">git rebase master [branchname]</div><div class="line">git checkout master</div><div class="line">git merge [branchname]</div><div class="line">git branch --merged</div><div class="line">git branch --no-merged</div><div class="line">git rebase --continue</div><div class="line"><span class="comment"># apply the changes introduced by some existing commits</span></div><div class="line"><span class="comment">## git cherry-pick [commit]</span></div><div class="line">git cherry-pick -</div></pre></td></tr></table></figure>
 <h2 id="Undoing-Things"><a href="#Undoing-Things" class="headerlink" title="Undoing Things"></a>Undoing Things</h2><blockquote>
-<p>撤销<br><strong>⚠️： <code>git checkout --</code> is dangerous. May be <code>git stash</code> is better.</strong></p>
+<p>撤销<br><strong>⚠️： <code>git checkout --</code> is dangerous. May be <code>git stash</code> is better.</strong><br>$ git stash apply</p>
 </blockquote>
 <p><img src="/blog/images/git/git-undoing.png" alt="git undoing"></p>
+<h2 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h2><blockquote>
+<p>git 忽略文件及目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*~</div><div class="line">.DS_Store</div><div class="line">.idea</div><div class="line">.vscode</div><div class="line">/node_modules</div></pre></td></tr></table></figure></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
@@ -194,7 +198,7 @@
     <link href="https://lencx.github.io/blog/2017/03/20/hexo-theme-lencx/"/>
     <id>https://lencx.github.io/blog/2017/03/20/hexo-theme-lencx/</id>
     <published>2017-03-20T01:42:15.000Z</published>
-    <updated>2017-03-27T11:13:55.000Z</updated>
+    <updated>2017-03-29T16:23:07.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><blockquote>
 <p>描述</p>
@@ -380,13 +384,17 @@
 <p>RSS订阅 在根目录下安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i hexo-generator-feed --save</div></pre></td></tr></table></figure></p>
 </blockquote>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># https://github.com/hexojs/hexo-generator-feed</span></div><div class="line"><span class="attr">feed:</span></div><div class="line"><span class="attr">  type:</span> atom</div><div class="line"><span class="attr">  path:</span> atom.xml</div><div class="line">  <span class="comment"># 0/false[all] | number</span></div><div class="line"><span class="attr">  limit:</span> <span class="literal">false</span></div><div class="line">  <span class="comment"># hub:</span></div><div class="line"><span class="attr">  content:</span> <span class="literal">true</span></div></pre></td></tr></table></figure>
-<h2 id="Keywords-amp-amp-description"><a href="#Keywords-amp-amp-description" class="headerlink" title="Keywords &amp;&amp; description"></a>Keywords &amp;&amp; description</h2><blockquote>
+<h2 id="Keywords-amp-amp-Description"><a href="#Keywords-amp-amp-Description" class="headerlink" title="Keywords &amp;&amp; Description"></a>Keywords &amp;&amp; Description</h2><blockquote>
 <p>关键字及描述</p>
 <ul>
 <li>在 <strong>root _config.yml</strong>中的<code>description</code>为网站描述</li>
 <li>post中的描述及关键字则需要自己在模版中进行添加，模板路径为<code>/scaffolds／post.md</code>,多个关键字用半角英文逗号隔开，如果未使用<code>keywords</code>，默认将<code>tags</code>填充为关键字<br><img src="/blog/images/hexo/hexo-scaffolds-post.png" alt="scaffolds post"></li>
 </ul>
 </blockquote>
+<h2 id="Local-Search"><a href="#Local-Search" class="headerlink" title="Local Search"></a>Local Search</h2><blockquote>
+<p>本地搜索：检索到的关键词高亮，不支持多词搜索<br>优先级：标题 &gt; 标签 &gt; 内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># generator content.json or search.json</span></div><div class="line">npm i hexo-generator-json-content --save</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>root _config.yml<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="attr">jsonContent:</span></div><div class="line"><span class="attr">  meta:</span> <span class="literal">false</span></div><div class="line"><span class="attr">  keywords:</span> <span class="literal">false</span> <span class="comment"># language name option </span></div><div class="line"><span class="attr">  dateFormat:</span> YYYY/MM/DD <span class="comment"># format string </span></div><div class="line"><span class="attr">  posts:</span></div><div class="line"><span class="attr">    title:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    date:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    path:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    text:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    tags:</span> <span class="literal">true</span></div></pre></td></tr></table></figure></p>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><blockquote>
 <p>结束语</p>
 <blockquote>

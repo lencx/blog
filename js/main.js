@@ -48,7 +48,7 @@ function unique(arr) {
     $(window).on('scroll', () => {
         let $winTop_2 = $(window).scrollTop()
         if ($winTop_2 > $winTop_1 && $winTop_2 > 500) {
-            $header.fadeOut(1000)
+            if(!$header.find('#search input').is(':focus')) $header.fadeOut(1000)
         } else if ($winTop_2 < $winTop_1) {
             $header.fadeIn(800)
         }
