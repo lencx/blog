@@ -43,16 +43,16 @@ body {
           body header ul.menus li a:hover {
             color: rgba(0, 0, 0, 0.8);
             text-shadow: 0 0 1px rgba(255, 255, 255, 0.7), 1px 0 1px rgba(255, 100, 0, 0.5), 0 1px 1px rgba(240, 150, 50, 0.8); } }
-    body header .search input[type='search'] {
+    body header #search input[type='search'] {
       border: solid 2px rgba(251, 86, 7, 0.5); }
-      body header .search input[type='search']:focus {
+      body header #search input[type='search']:focus {
         background: #fff;
         border-color: rgba(255, 50, 100, 0.5);
         box-shadow: 0 0 5px rgba(255, 100, 200, 0.5);
         color: rgba(200, 80, 120, 0.8); }
-      body header .search input[type='search']:-moz-placeholder {
+      body header #search input[type='search']:-moz-placeholder {
         color: rgba(255, 100, 100, 0.8); }
-      body header .search input[type='search']::-webkit-input-placeholder {
+      body header #search input[type='search']::-webkit-input-placeholder {
         color: rgba(255, 100, 100, 0.8); }
     body header .menu-ico span:before, body header .menu-ico span:after {
       border: solid 2px rgba(0, 0, 0, 0.3); }
@@ -61,7 +61,7 @@ body {
     @media screen and (max-width: 767px) {
       body header ul.menus {
         background: rgba(0, 0, 0, 0.7); }
-      body header .search {
+      body header #search {
         background: rgba(0, 0, 0, 0.7); } }
   body .sidebar h2 {
     color: rgba(240, 240, 240, 0.8);

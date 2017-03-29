@@ -30,7 +30,7 @@ function unique(arr) {
     let $header, $menuEl, $search, $menu, $winTop_1
     $header = $('header')
     $menuEl = $header.find('.menu-ico')
-    $search = $header.find('.search')
+    $search = $header.find('#search')
     $menu = $header.find('.menus')
     $winTop_1 = 0
     function preventDefault(e) {
