@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://lencx.github.io/blog/"/>
-  <updated>2017-03-31T10:07:03.000Z</updated>
+  <updated>2017-03-31T10:24:45.000Z</updated>
   <id>https://lencx.github.io/blog/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://lencx.github.io/blog/2017/03/30/es6-variable/"/>
     <id>https://lencx.github.io/blog/2017/03/30/es6-variable/</id>
     <published>2017-03-30T15:02:47.000Z</published>
-    <updated>2017-03-31T10:07:03.000Z</updated>
+    <updated>2017-03-31T10:24:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><blockquote>
 <p>let：声明块范围内的局部变量<br>var：关键字声明的为全局变量，或者与整个函数本地定义，而与块范围无关</p>
@@ -33,6 +33,7 @@
 <p>范围界定规则</p>
 </blockquote>
 </blockquote>
+<a id="more"></a>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// var</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++) &#123;</div><div class="line">  <span class="built_in">console</span>.log(i)</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'outside loop:'</span>, i) <span class="comment">// outside loop: 5</span></div><div class="line"></div><div class="line"><span class="comment">// let</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++) &#123;</div><div class="line">  <span class="built_in">console</span>.log(i)</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'outside loop:'</span>, i) <span class="comment">// ReferenceError: i is not defined</span></div><div class="line"></div><div class="line"><span class="comment">// let声明的变量在代码块外显示未定义</span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span></div><div class="line">  <span class="keyword">let</span> b = <span class="number">2</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a) <span class="comment">// 1</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">// ReferenceError: b is not defined</span></div><div class="line"></div><div class="line"><span class="comment">// 在程序和函数的顶层，let与var不同，不会在全局对象上创建一个属性</span></div><div class="line"><span class="keyword">var</span> x = <span class="number">10</span></div><div class="line"><span class="keyword">let</span> y = <span class="number">10</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.x) <span class="comment">// 10 // this =&gt; window</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.y) <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
 <p>在<code>for</code>循环中的用<code>var</code>声明的<code>i</code>变量在循环结束本该被销毁，但之后仍可被访问。替换为<code>let</code>时则会报错。在同一个代码块中同时声明<code>a</code>, <code>b</code>两个变量，在代码块外部<code>a</code>可以正常访问，用<code>let</code>声明<code>b</code>变量会报错。由此可以看出<code>var</code>声明的变量为全局变量，而<code>let</code>声明的变量只在所属的代码块内有效，只在本代码块之内有效，则说明<code>let</code>声明变量的代码块就是一个块级作用域。</p>
 <h3 id="Cleaner-code-in-inner-functions"><a href="#Cleaner-code-in-inner-functions" class="headerlink" title="Cleaner code in inner functions"></a>Cleaner code in inner functions</h3><blockquote>
@@ -81,7 +82,7 @@
 <p>标签模板</p>
 </blockquote>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tpl</span>(<span class="params">string, ...keys</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">...vals</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> dict = vals[vals.length - <span class="number">1</span>] || &#123;&#125;</div><div class="line">    <span class="keyword">let</span> result = [string[<span class="number">0</span>]]</div><div class="line">    keys.forEach(<span class="function">(<span class="params">key, i</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> val = <span class="built_in">Number</span>.isInteger(key) ? vals[key] : dict[key]</div><div class="line">      result.push(val, string[i+<span class="number">1</span>])</div><div class="line">    &#125;)</div><div class="line">    <span class="keyword">return</span> result.join(<span class="string">''</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> s1 = tpl<span class="string">`<span class="subst">$&#123;<span class="number">0</span>&#125;</span><span class="subst">$&#123;<span class="number">2</span>&#125;</span><span class="subst">$&#123;<span class="number">1</span>&#125;</span>`</span></div><div class="line"><span class="built_in">console</span>.log(s1(<span class="string">'l'</span>,<span class="string">'n'</span>,<span class="string">'e'</span>))</div><div class="line"><span class="keyword">let</span> s2 = tpl<span class="string">`<span class="subst">$&#123;<span class="number">0</span>&#125;</span><span class="subst">$&#123;<span class="string">'name'</span>&#125;</span>`</span></div><div class="line"><span class="built_in">console</span>.log(s2(<span class="string">'hello,'</span>, &#123;<span class="attr">name</span>: <span class="string">'len'</span>&#125;))</div><div class="line"></div><div class="line"><span class="comment">// alert(1)</span></div><div class="line">alert<span class="string">`1`</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tpl</span>(<span class="params">string, ...keys</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">...vals</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> dict = vals[vals.length - <span class="number">1</span>] || &#123;&#125;</div><div class="line">    <span class="keyword">let</span> result = [string[<span class="number">0</span>]]</div><div class="line">    keys.forEach(<span class="function">(<span class="params">key, i</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">let</span> val = <span class="built_in">Number</span>.isInteger(key) ? vals[key] : dict[key]</div><div class="line">      result.push(val, string[i+<span class="number">1</span>])</div><div class="line">    &#125;)</div><div class="line">    <span class="keyword">return</span> result.join(<span class="string">''</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> s1 = tpl<span class="string">`<span class="subst">$&#123;<span class="number">0</span>&#125;</span><span class="subst">$&#123;<span class="number">2</span>&#125;</span><span class="subst">$&#123;<span class="number">1</span>&#125;</span>`</span></div><div class="line"><span class="built_in">console</span>.log(s1(<span class="string">'l'</span>,<span class="string">'n'</span>,<span class="string">'e'</span>)) <span class="comment">// len</span></div><div class="line"><span class="keyword">let</span> s2 = tpl<span class="string">`<span class="subst">$&#123;<span class="number">0</span>&#125;</span><span class="subst">$&#123;<span class="string">'name'</span>&#125;</span>`</span></div><div class="line"><span class="built_in">console</span>.log(s2(<span class="string">'hello,'</span>, &#123;<span class="attr">name</span>: <span class="string">'len'</span>&#125;)) <span class="comment">// hello,len</span></div><div class="line"></div><div class="line"><span class="comment">// alert(1)</span></div><div class="line">alert<span class="string">`1`</span></div></pre></td></tr></table></figure>
 <h3 id="Raw-string"><a href="#Raw-string" class="headerlink" title="Raw string"></a>Raw string</h3><blockquote>
 <blockquote>
 <p>原始字符串：标签模板文字的第一个函数参数可用的特殊属性允许你在输入时访问原始字符串，而无需处理转义序列。<code>String.raw</code><br><img src="/blog/images/es6/es6-raw.png" alt="ES6 raw string"></p>
@@ -92,7 +93,16 @@
     <summary type="html">
     
       &lt;h2 id=&quot;let&quot;&gt;&lt;a href=&quot;#let&quot; class=&quot;headerlink&quot; title=&quot;let&quot;&gt;&lt;/a&gt;let&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;let：声明块范围内的局部变量&lt;br&gt;var：关键字声明的为全局变量，或者与整个函数本地定义，而与块范围无
+&lt;p&gt;let：声明块范围内的局部变量&lt;br&gt;var：关键字声明的为全局变量，或者与整个函数本地定义，而与块范围无关&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在ES5中只有全局作用域和函数作用域，而没有块级作用域，而&lt;code&gt;let&lt;/code&gt;的特性则为&lt;code&gt;JavaScript&lt;/code&gt;提供了块级作用域的功能，避免了变量泄漏。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Scoping-rules&quot;&gt;&lt;a href=&quot;#Scoping-rules&quot; class=&quot;headerlink&quot; title=&quot;Scoping rules&quot;&gt;&lt;/a&gt;Scoping rules&lt;/h3&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;范围界定规则&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -114,7 +124,7 @@
     <link href="https://lencx.github.io/blog/2017/03/25/js-console/"/>
     <id>https://lencx.github.io/blog/2017/03/25/js-console/</id>
     <published>2017-03-25T05:27:58.000Z</published>
-    <updated>2017-03-25T15:56:06.000Z</updated>
+    <updated>2017-03-31T10:25:40.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="log-info"><a href="#log-info" class="headerlink" title="log(), info()"></a>log(), info()</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>)</div><div class="line"><span class="comment">// 可接受多个参数</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="number">1</span>, <span class="number">2</span>)</div></pre></td></tr></table></figure>
 <h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><table>
@@ -148,6 +158,7 @@
 </tbody>
 </table>
 <p><strong>⚠️：不同格式数据必须使用对应格式的占位符</strong></p>
+<a id="more"></a>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// %s</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'%s + %s = %s'</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span>) <span class="comment">// 2 + 3 = 6</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'%s is red'</span>, <span class="string">'#f00'</span>) <span class="comment">// #f00 is red</span></div><div class="line"><span class="comment">// %c</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'%chello, world'</span>, <span class="string">'color:blue;background:yellow;font-size:36px;'</span>)</div></pre></td></tr></table></figure>
 <p><img src="/blog/images/js/console-css.png" alt="信息分组"></p>
 <hr>
@@ -157,7 +168,38 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;log-info&quot;&gt;&lt;a href=&quot;#log-info&quot; class=&quot;headerlink&quot; title=&quot;log(), info()&quot;&gt;&lt;/a&gt;log(), info()&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr
+      &lt;h2 id=&quot;log-info&quot;&gt;&lt;a href=&quot;#log-info&quot; class=&quot;headerlink&quot; title=&quot;log(), info()&quot;&gt;&lt;/a&gt;log(), info()&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 可接受多个参数&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;b&#39;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;占位符&quot;&gt;&lt;a href=&quot;#占位符&quot; class=&quot;headerlink&quot; title=&quot;占位符&quot;&gt;&lt;/a&gt;占位符&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;占位符&lt;/th&gt;
+&lt;th&gt;符号&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;字符&lt;/td&gt;
+&lt;td&gt;%s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CSS&lt;/td&gt;
+&lt;td&gt;%c&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;整数&lt;/td&gt;
+&lt;td&gt;%d / %i&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;浮点数&lt;/td&gt;
+&lt;td&gt;%f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;对象&lt;/td&gt;
+&lt;td&gt;%o&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;⚠️：不同格式数据必须使用对应格式的占位符&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -197,16 +239,16 @@
     <link href="https://lencx.github.io/blog/2017/03/24/git-basics/"/>
     <id>https://lencx.github.io/blog/2017/03/24/git-basics/</id>
     <published>2017-03-24T07:05:00.000Z</published>
-    <updated>2017-03-29T15:44:55.000Z</updated>
+    <updated>2017-03-31T10:27:09.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="File-status-lifecycle"><a href="#File-status-lifecycle" class="headerlink" title="File status lifecycle"></a>File status lifecycle</h2><blockquote>
 <p>文件状态的生命周期<br><img src="/blog/images/git/git-file-status.png" alt="file status"></p>
 </blockquote>
+<a id="more"></a>
 <h2 id="Basics-command"><a href="#Basics-command" class="headerlink" title="Basics command"></a>Basics command</h2><blockquote>
 <p>基础命令</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Getting started</span></div><div class="line">git config --global user.name <span class="string">"your name"</span></div><div class="line">git config --global user.email <span class="string">"your@email"</span></div><div class="line"></div><div class="line"><span class="comment"># initializes a directory as a git repository</span></div><div class="line">git init</div><div class="line"><span class="comment"># view the status of your files in the working directory and staging area</span></div><div class="line">git status</div><div class="line"><span class="comment"># adds file contents to the staging area</span></div><div class="line"><span class="comment">## git add -A</span></div><div class="line"><span class="comment">## or </span></div><div class="line"><span class="comment">## git add .</span></div><div class="line">git add</div><div class="line"><span class="comment"># shows diff of what is staged and what is modified but unstaged</span></div><div class="line"><span class="comment">## git diff --staged # 查看暂存区变化</span></div><div class="line">git diff</div><div class="line"><span class="comment"># records a snapshot of the staging area</span></div><div class="line"><span class="comment"># git commit -m "msg"</span></div><div class="line">git commit</div><div class="line"><span class="comment"># add &amp; commit 合二为一， 前提是必须正常提交过一次才能使用</span></div><div class="line">git commit <span class="_">-a</span> -m <span class="string">"msg"</span></div><div class="line"><span class="comment"># remove files from the staging area</span></div><div class="line"><span class="comment">## git rm &lt;file name&gt; # 从暂存区将文件移除</span></div><div class="line">git rm</div><div class="line"><span class="comment"># git rm --cached orig; mv orig new; git add new</span></div><div class="line"><span class="comment">## git mv &lt;old filename&gt; &lt;new filename&gt; # staging area changed</span></div><div class="line">git mv</div><div class="line"><span class="comment"># show commit history of a branch</span></div><div class="line">git <span class="built_in">log</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
 <h2 id="Working-with-remotes"><a href="#Working-with-remotes" class="headerlink" title="Working with remotes"></a>Working with remotes</h2><blockquote>
 <p>远端</p>
 </blockquote>
@@ -254,9 +296,9 @@
       <category term="git" scheme="https://lencx.github.io/blog/categories/git/"/>
     
     
-      <category term="command" scheme="https://lencx.github.io/blog/tags/command/"/>
-    
       <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
+    
+      <category term="command" scheme="https://lencx.github.io/blog/tags/command/"/>
     
       <category term="git" scheme="https://lencx.github.io/blog/tags/git/"/>
     
@@ -267,16 +309,18 @@
     <link href="https://lencx.github.io/blog/2017/03/22/hexo-post/"/>
     <id>https://lencx.github.io/blog/2017/03/22/hexo-post/</id>
     <published>2017-03-22T10:36:34.000Z</published>
-    <updated>2017-03-25T16:25:03.000Z</updated>
+    <updated>2017-03-31T10:27:40.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建一篇文章</span></div><div class="line"><span class="comment"># hexo new post &lt;your-post-title&gt;</span></div><div class="line">hexo new &lt;your-post-title&gt;</div><div class="line"><span class="comment"># 创建一个页面</span></div><div class="line">hexo new page &lt;your-page-name&gt;</div></pre></td></tr></table></figure>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo init <span class="comment"># 初始化</span></div><div class="line">hexo clean <span class="comment"># 删除生成的文件和缓存</span></div><div class="line">hexo g <span class="comment"># 生成静态文件</span></div><div class="line">hexo s <span class="comment"># 启动服务，可以在本地预览</span></div><div class="line">hexo d <span class="comment"># 部署</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="git部署"><a href="#git部署" class="headerlink" title="git部署"></a>git部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 如果未安装hexo-deployer-git</span></div><div class="line">npm install hexo-deployer-git --save</div><div class="line"></div><div class="line"><span class="comment"># 从远端克隆 .deploy_git 目录</span></div><div class="line">git <span class="built_in">clone</span> &lt;gh-pages repo&gt; .deploy_git</div><div class="line"><span class="comment"># 删除 .deploy_git</span></div><div class="line">rm -rf .deploy_git</div></pre></td></tr></table></figure>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span> &lt;repository url<span class="string">&gt;</span></div><div class="line"><span class="attr">  branch:</span> [branch] <span class="comment">#master</span></div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;写作&quot;&gt;&lt;a href=&quot;#写作&quot; class=&quot;headerlink&quot; title=&quot;写作&quot;&gt;&lt;/a&gt;写作&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div cl
+      &lt;h2 id=&quot;写作&quot;&gt;&lt;a href=&quot;#写作&quot; class=&quot;headerlink&quot; title=&quot;写作&quot;&gt;&lt;/a&gt;写作&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 创建一篇文章&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# hexo new post &amp;lt;your-post-title&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo new &amp;lt;your-post-title&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 创建一个页面&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo new page &amp;lt;your-page-name&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo init &lt;span class=&quot;comment&quot;&gt;# 初始化&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo clean &lt;span class=&quot;comment&quot;&gt;# 删除生成的文件和缓存&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo g &lt;span class=&quot;comment&quot;&gt;# 生成静态文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo s &lt;span class=&quot;comment&quot;&gt;# 启动服务，可以在本地预览&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo d &lt;span class=&quot;comment&quot;&gt;# 部署&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

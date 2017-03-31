@@ -894,7 +894,7 @@ footer {
   padding: 15px; }
 
 .sidebar {
-  width: 250px;
+  width: 260px;
   height: 100%;
   margin-left: 30px;
   padding-top: 30px; }
@@ -967,6 +967,11 @@ footer {
       padding: 0 2px; }
 
 .sidebar .recent-post li {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 250px;
   list-style: none;
   line-height: 28px; }
 
@@ -974,7 +979,7 @@ footer {
   width: 90%; }
   @media screen and (min-width: 992px) {
     .container .article-container {
-      width: calc(100% - 280px); } }
+      width: calc(100% - 290px); } }
   @media screen and (max-width: 991px) {
     .container .article-container {
       width: 100%; }
@@ -1424,7 +1429,7 @@ figure.black {
   figure.black:before {
     color: rgba(255, 255, 0, 0.8) !important; }
   figure.black table tr {
-    background: rgba(0, 0, 0, 0.7) !important; }
+    background: rgba(0, 0, 0, 0.9) !important; }
   figure.black .gutter {
     background: rgba(30, 30, 30, 0.3); }
   figure.black .gutter .line {
@@ -1855,7 +1860,6 @@ figure.plain:before {
 
 .post-pagination .pagination {
   padding: 10px;
-  width: 96%;
   margin: 10px auto 15px; }
 
 @media screen and (max-width: 991px) {
