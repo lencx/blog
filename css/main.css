@@ -204,25 +204,49 @@ h1 {
   font-size: 2rem;
   line-height: 2.2rem; }
 
+.post-preview .post-excerpt h1:before,
+.post-content div.post-content h1:before {
+  content: ""; }
+
 h2 {
   font-size: 1.5rem;
   line-height: 1.75rem; }
+
+.post-preview .post-excerpt h2:before,
+.post-content div.post-content h2:before {
+  content: ""; }
 
 h3 {
   font-size: 1.33rem;
   line-height: 1.5rem; }
 
+.post-preview .post-excerpt h3:before,
+.post-content div.post-content h3:before {
+  content: "§"; }
+
 h4 {
   font-size: 1rem;
   line-height: 1.33rem; }
+
+.post-preview .post-excerpt h4:before,
+.post-content div.post-content h4:before {
+  content: "➤"; }
 
 h5 {
   font-size: 0.87rem;
   line-height: 1.17rem; }
 
+.post-preview .post-excerpt h5:before,
+.post-content div.post-content h5:before {
+  content: "❦"; }
+
 h6 {
   font-size: 0.75rem;
   line-height: 1rem; }
+
+.post-preview .post-excerpt h6:before,
+.post-content div.post-content h6:before {
+  content: "❡"; }
 
 .article-container article {
   box-sizing: border-box;
@@ -236,16 +260,15 @@ h6 {
 .article-container article .post-title, .post-content .post-title {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.4), 1px -1px 1px rgba(0, 50, 50, 0.3), -1px 1px 2px rgba(180, 120, 30, 0.8); }
 
-.article-container article .post-excerpt h1, .post-content .post-excerpt h1, .article-container article .post-conent h1, .post-content .post-conent h1 {
+.article-container article .post-excerpt h1, .post-content .post-excerpt h1, .article-container article .post-content h1, .post-content .post-content h1 {
   color: #24292e; }
 
-.article-container article .post-excerpt h2, .post-content .post-excerpt h2, .article-container article .post-conent h2, .post-content .post-conent h2 {
+.article-container article .post-excerpt h2, .post-content .post-excerpt h2, .article-container article .post-content h2, .post-content .post-content h2 {
   color: #083d77; }
 
-.article-container article .post-excerpt h1, .post-content .post-excerpt h1, .article-container article .post-excerpt h2, .post-content .post-excerpt h2, .article-container article .post-conent h1, .post-content .post-conent h1, .article-container article .post-conent h2, .post-content .post-conent h2 {
+.article-container article .post-excerpt h1, .post-content .post-excerpt h1, .article-container article .post-excerpt h2, .post-content .post-excerpt h2, .article-container article .post-content h1, .post-content .post-content h1, .article-container article .post-content h2, .post-content .post-content h2 {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.4), 1px -1px 1px rgba(0, 50, 50, 0.3), -1px 1px 2px rgba(180, 120, 30, 0.8); }
-  .article-container article .post-excerpt h1:before, .post-content .post-excerpt h1:before, .article-container article .post-excerpt h2:before, .post-content .post-excerpt h2:before, .article-container article .post-conent h1:before, .post-content .post-conent h1:before, .article-container article .post-conent h2:before, .post-content .post-conent h2:before {
-    content: '\f06c';
+  .article-container article .post-excerpt h1:before, .post-content .post-excerpt h1:before, .article-container article .post-excerpt h2:before, .post-content .post-excerpt h2:before, .article-container article .post-content h1:before, .post-content .post-content h1:before, .article-container article .post-content h2:before, .post-content .post-content h2:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
@@ -255,14 +278,13 @@ h6 {
     transform: rotate(-30deg);
     margin-right: 10px; }
 
-.article-container article .post-excerpt h3, .post-content .post-excerpt h3, .article-container article .post-excerpt h4, .post-content .post-excerpt h4, .article-container article .post-excerpt h5, .post-content .post-excerpt h5, .article-container article .post-excerpt h6, .post-content .post-excerpt h6, .article-container article .post-conent h3, .post-content .post-conent h3, .article-container article .post-conent h4, .post-content .post-conent h4, .article-container article .post-conent h5, .post-content .post-conent h5, .article-container article .post-conent h6, .post-content .post-conent h6 {
+.article-container article .post-excerpt h3, .post-content .post-excerpt h3, .article-container article .post-excerpt h4, .post-content .post-excerpt h4, .article-container article .post-excerpt h5, .post-content .post-excerpt h5, .article-container article .post-excerpt h6, .post-content .post-excerpt h6, .article-container article .post-content h3, .post-content .post-content h3, .article-container article .post-content h4, .post-content .post-content h4, .article-container article .post-content h5, .post-content .post-content h5, .article-container article .post-content h6, .post-content .post-content h6 {
   font-size: 1.2rem;
   color: #044;
   margin: 12px 0; }
-  .article-container article .post-excerpt h3:before, .post-content .post-excerpt h3:before, .article-container article .post-excerpt h4:before, .post-content .post-excerpt h4:before, .article-container article .post-excerpt h5:before, .post-content .post-excerpt h5:before, .article-container article .post-excerpt h6:before, .post-content .post-excerpt h6:before, .article-container article .post-conent h3:before, .post-content .post-conent h3:before, .article-container article .post-conent h4:before, .post-content .post-conent h4:before, .article-container article .post-conent h5:before, .post-content .post-conent h5:before, .article-container article .post-conent h6:before, .post-content .post-conent h6:before {
+  .article-container article .post-excerpt h3:before, .post-content .post-excerpt h3:before, .article-container article .post-excerpt h4:before, .post-content .post-excerpt h4:before, .article-container article .post-excerpt h5:before, .post-content .post-excerpt h5:before, .article-container article .post-excerpt h6:before, .post-content .post-excerpt h6:before, .article-container article .post-content h3:before, .post-content .post-content h3:before, .article-container article .post-content h4:before, .post-content .post-content h4:before, .article-container article .post-content h5:before, .post-content .post-content h5:before, .article-container article .post-content h6:before, .post-content .post-content h6:before {
     font-family: "Shrikhand";
     display: inline-block;
-    content: '§';
     font-weight: bold;
     color: rgba(240, 240, 200, 0.8);
     margin-right: 10px;
@@ -1866,7 +1888,6 @@ figure.plain:before {
 
 .post-content {
   margin: 0 auto;
-  width: 90%;
   max-width: 1200px; }
   .post-content .post-title {
     text-align: center; }
@@ -1874,7 +1895,6 @@ figure.plain:before {
     text-align: center; }
 
 .post-pagination .pagination {
-  width: 90%;
   max-width: 1200px;
   padding: 5px 10px;
   margin: 10px auto 15px; }
@@ -1934,8 +1954,6 @@ figure.plain:before {
     display: none !important; } }
 
 .post-foot {
-  width: 90%;
-  max-width: 1200px;
   margin: 0 auto; }
   .post-foot .post-comment {
     padding: 10px 20px; }
