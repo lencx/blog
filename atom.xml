@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://lencx.github.io/blog/"/>
-  <updated>2017-04-03T11:28:30.000Z</updated>
+  <updated>2017-04-09T15:56:16.000Z</updated>
   <id>https://lencx.github.io/blog/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6 - Array</title>
+    <link href="https://lencx.github.io/blog/2017/04/08/es6-array/"/>
+    <id>https://lencx.github.io/blog/2017/04/08/es6-array/</id>
+    <published>2017-04-08T03:14:48.000Z</published>
+    <updated>2017-04-09T15:56:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 遍历数组</span></div><div class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>]</div><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>,len=arr.length; i&lt;len; i++) &#123;</div><div class="line">  <span class="built_in">console</span>.log(arr[i]) <span class="comment">// 1 2 5 8</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> arr) &#123;</div><div class="line">  <span class="built_in">console</span>.log(item) <span class="comment">// 1 2 5 8</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> args = <span class="built_in">Array</span>.from(<span class="built_in">arguments</span>)</div><div class="line">  <span class="keyword">return</span> args.reduce(<span class="function">(<span class="params">prev, curr</span>) =&gt;</span> prev + curr)</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">4</span>))</div><div class="line"></div><div class="line"><span class="comment">// 过滤</span></div><div class="line"><span class="keyword">let</span> animal = [</div><div class="line">  &#123;</div><div class="line">    <span class="attr">type</span>: <span class="string">'dog'</span>,</div><div class="line">    <span class="attr">color</span>: <span class="string">'white'</span></div><div class="line">  &#125;, &#123;</div><div class="line">    <span class="attr">type</span>: <span class="string">'dog'</span>,</div><div class="line">    <span class="attr">color</span>: <span class="string">'black'</span></div><div class="line">  &#125;, &#123;</div><div class="line">    <span class="attr">type</span>: <span class="string">'cat'</span>,</div><div class="line">    <span class="attr">color</span>: <span class="string">'white'</span></div><div class="line">  &#125;, &#123;</div><div class="line">    <span class="attr">type</span>: <span class="string">'cat'</span>,</div><div class="line">    <span class="attr">color</span>: <span class="string">'yellow'</span></div><div class="line">  &#125;</div><div class="line">]</div><div class="line"><span class="keyword">let</span> filterAnimal = animal.filter(<span class="function">(<span class="params">animal</span>) =&gt;</span> animal.type === <span class="string">'dog'</span>)</div><div class="line"><span class="built_in">console</span>.log(filterAnimal)</div><div class="line"></div><div class="line"><span class="comment">// some</span></div><div class="line"><span class="keyword">let</span> a = [<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>]</div><div class="line">a.some(<span class="function">(<span class="params">i</span>) =&gt;</span> <span class="built_in">console</span>.log(i * <span class="number">2</span>)) <span class="comment">// 4 8 10 14</span></div><div class="line"></div><div class="line"><span class="comment">// 数组去重</span></div><div class="line"><span class="comment">// ES5</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> arr.filter(<span class="function">(<span class="params">item, index, arr</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">return</span> arr.indexOf(item) === index</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">// ES6</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique2</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> [...new <span class="built_in">Set</span>(arr)]</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Array&quot;&gt;&lt;a href=&quot;#Array&quot; class=&quot;headerlink&quot; title=&quot;Array&quot;&gt;&lt;/a&gt;Array&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;p
+    
+    </summary>
+    
+      <category term="js" scheme="https://lencx.github.io/blog/categories/js/"/>
+    
+    
+      <category term="ES6" scheme="https://lencx.github.io/blog/tags/ES6/"/>
+    
+      <category term="Array" scheme="https://lencx.github.io/blog/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6 - Object</title>
+    <link href="https://lencx.github.io/blog/2017/04/08/es6-object/"/>
+    <id>https://lencx.github.io/blog/2017/04/08/es6-object/</id>
+    <published>2017-04-08T02:33:35.000Z</published>
+    <updated>2017-04-09T15:57:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = &#123;</div><div class="line">  <span class="attr">height</span>: <span class="string">'a100'</span>,</div><div class="line">  <span class="attr">width</span>: <span class="string">'a200'</span>,</div><div class="line">  <span class="attr">size</span>: <span class="string">'a400'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> b = &#123;</div><div class="line">  <span class="attr">height</span>: <span class="string">'b100'</span>,</div><div class="line">  <span class="attr">width</span>: <span class="string">'b300'</span>,</div><div class="line">  <span class="attr">weight</span>: <span class="string">'b500'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> c = <span class="built_in">Object</span>.assign(&#123;&#125;, a, b)</div><div class="line"><span class="built_in">console</span>.log(c) <span class="comment">// Object &#123;height: "b100", width: "b300", size: "a400", weight: "b500"&#125;</span></div><div class="line"><span class="keyword">let</span> d = <span class="built_in">Object</span>.assign(&#123;&#125;, b, a)</div><div class="line"><span class="built_in">console</span>.log(d) <span class="comment">// Object &#123;height: "a100", width: "a200", weight: "b500", size: "a400"&#125;</span></div><div class="line"></div><div class="line"><span class="comment">// copy</span></div><div class="line"><span class="keyword">let</span> person = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'len'</span>,</div><div class="line">  <span class="attr">age</span>: <span class="number">22</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// person2 = person</span></div><div class="line"><span class="comment">// person2.age = 24</span></div><div class="line"><span class="comment">// console.log(person) // Object &#123;name: "len", age: 24&#125;</span></div><div class="line"></div><div class="line"><span class="comment">//let person2 = Object.assign(&#123;&#125;, person)</span></div><div class="line"><span class="comment">//person2.age = 25</span></div><div class="line"><span class="keyword">let</span> person2 = <span class="built_in">Object</span>.assign(&#123;&#125;, person, &#123;<span class="attr">age</span>: <span class="number">25</span>&#125;)</div><div class="line"><span class="built_in">console</span>.log(person, person2)<span class="comment">// Object &#123;name: "len", age: 22&#125; Object &#123;name: "len", age: 25&#125;</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Object&quot;&gt;&lt;a href=&quot;#Object&quot; class=&quot;headerlink&quot; title=&quot;Object&quot;&gt;&lt;/a&gt;Object&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter
+    
+    </summary>
+    
+      <category term="js" scheme="https://lencx.github.io/blog/categories/js/"/>
+    
+    
+      <category term="ES6" scheme="https://lencx.github.io/blog/tags/ES6/"/>
+    
+      <category term="Object" scheme="https://lencx.github.io/blog/tags/Object/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6-Promise</title>
@@ -522,9 +570,9 @@
       <category term="git" scheme="https://lencx.github.io/blog/categories/git/"/>
     
     
-      <category term="command" scheme="https://lencx.github.io/blog/tags/command/"/>
-    
       <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
+    
+      <category term="command" scheme="https://lencx.github.io/blog/tags/command/"/>
     
       <category term="git" scheme="https://lencx.github.io/blog/tags/git/"/>
     
