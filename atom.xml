@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://lencx.github.io/blog/"/>
-  <updated>2017-04-09T15:56:16.000Z</updated>
+  <updated>2017-04-11T15:16:32.000Z</updated>
   <id>https://lencx.github.io/blog/</id>
   
   <author>
@@ -14,6 +14,171 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS - Base</title>
+    <link href="https://lencx.github.io/blog/2017/04/11/js-base/"/>
+    <id>https://lencx.github.io/blog/2017/04/11/js-base/</id>
+    <published>2017-04-11T09:11:10.000Z</published>
+    <updated>2017-04-11T15:16:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p><strong>JS：</strong> 常用方法总结</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">lg</span>(<span class="params">...args</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">console</span>.log(...args)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> str = <span class="string">'hello js'</span></div><div class="line"></div><div class="line"><span class="comment">// 获取字符串长度</span></div><div class="line">lg(str.length) <span class="comment">// 8</span></div><div class="line"></div><div class="line"><span class="comment">// 转换为大写</span></div><div class="line">lg(str.toUpperCase()) <span class="comment">// HELLO JS</span></div><div class="line"></div><div class="line"><span class="comment">// 字符访问</span></div><div class="line"><span class="comment">// charAt()访问或将`str`视为一个数组，使用数字索引进行访问</span></div><div class="line">lg(str.charAt(<span class="number">2</span>), str[<span class="number">3</span>]) <span class="comment">// l l</span></div><div class="line"></div><div class="line"><span class="comment">// 字符串比较</span></div><div class="line"><span class="keyword">let</span> a = <span class="string">'a'</span></div><div class="line"><span class="keyword">let</span> b = <span class="string">'b'</span></div><div class="line"><span class="comment">// a is less than b</span></div><div class="line">a &lt; b ? lg(<span class="string">`<span class="subst">$&#123;a&#125;</span> is less than <span class="subst">$&#123;b&#125;</span>`</span>) : lg(<span class="string">`<span class="subst">$&#123;a&#125;</span> is greater or equal <span class="subst">$&#123;b&#125;</span>`</span>)</div><div class="line"><span class="comment">// 使用`localeCompare()`比较</span></div><div class="line"><span class="comment">// 前者小于后者，返回`-1`；前者大于后者则返回`1`；相等时，返回`0`</span></div><div class="line">lg(a.localeCompare(b)) <span class="comment">// -1</span></div><div class="line">lg(b.localeCompare(a)) <span class="comment">// 1</span></div><div class="line">lg(b.localeCompare(<span class="string">'b'</span>)) <span class="comment">// 0</span></div><div class="line"></div><div class="line"><span class="comment">// 原始字符，不转义</span></div><div class="line">lg(<span class="built_in">String</span>.raw<span class="string">`<span class="subst">$&#123;str&#125;</span>\n 没有换行`</span>)</div><div class="line"></div><div class="line"><span class="comment">// 多个字符串连接</span></div><div class="line"><span class="keyword">let</span> str2 = <span class="string">'hello css,'</span></div><div class="line"><span class="keyword">let</span> str3 = <span class="string">' html '</span></div><div class="line"><span class="keyword">let</span> str4 = <span class="string">'...'</span></div><div class="line">lg(str2.concat(str3, str4)) <span class="comment">// hello css, html ...</span></div><div class="line"></div><div class="line"><span class="comment">// 在另一个字符串中找到一个字符串，返回`true`或`false`</span></div><div class="line"><span class="keyword">let</span> strOne = <span class="string">'hello one'</span></div><div class="line"><span class="keyword">let</span> strTwo = <span class="string">'hello'</span></div><div class="line">strOne.includes(strTwo) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">// 判断一个字符串是否以另一个字符串结尾，返回`true`或`false`</span></div><div class="line"><span class="keyword">let</span> strEnds = <span class="string">'hello 123 456 js.'</span></div><div class="line">lg(strEnds.endsWith(<span class="string">'js.'</span>)) <span class="comment">// true</span></div><div class="line">lg(strEnds.endsWith(<span class="string">'456'</span>)) <span class="comment">// false</span></div><div class="line">lg(strEnds.endsWith(<span class="string">'456'</span>, <span class="number">13</span>)) <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">// `indexOf()`返回指定值的第一次出现调用`String`对象中的索引。如果找不到则返回`-1`</span></div><div class="line"><span class="comment">// `lastIndexOf()`返回指定值的最后一次出现调用`String`对象中的索引。如果找不到则返回`-1`</span></div><div class="line"><span class="keyword">let</span> hello = <span class="string">'hello len'</span></div><div class="line">lg(hello.indexOf(<span class="string">'len'</span>)) <span class="comment">// 6</span></div><div class="line">lg(hello.indexOf(<span class="string">'lencx'</span>)) <span class="comment">// -1</span></div><div class="line"><span class="comment">// The index of the first l from the beginning is 2</span></div><div class="line">lg(<span class="string">`The index of the first l from the beginning is <span class="subst">$&#123;hello.indexOf(<span class="string">'l'</span>)&#125;</span>`</span>)</div><div class="line"><span class="comment">// The index of the last l from the beginning is 6</span></div><div class="line">lg(<span class="string">`The index of the last l from the beginning is <span class="subst">$&#123;hello.lastIndexOf(<span class="string">'l'</span>)&#125;</span>`</span>)</div><div class="line"></div><div class="line"><span class="comment">// 在匹配字符串与正则表达式时检索匹配项</span></div><div class="line"><span class="comment">// 打印结果请看附图一</span></div><div class="line"><span class="keyword">let</span> str5 = <span class="string">'For more information, see Chapter 3.4.5.2'</span></div><div class="line"><span class="keyword">let</span> re = <span class="regexp">/see (chapter \d+(\.\d)*)/i</span></div><div class="line"><span class="keyword">let</span> found = str5.match(re)</div><div class="line"><span class="built_in">console</span>.log(found)</div><div class="line"><span class="comment">// `0: see Chapter 3.4.5.2`是整个匹配的值</span></div><div class="line"><span class="comment">// `1: Chapter 3.4.5.2`是被`(chapter \d+(\.\d)*)`捕获</span></div><div class="line"><span class="comment">// `2: .2`是最后被`(\.\d)`捕获的值</span></div><div class="line"><span class="comment">// `index: 22`是整个匹配的从零开始的索引</span></div><div class="line"><span class="comment">// `input: For more information, see Chapter 3.4.5.2`是被解析的原始字符串</span></div><div class="line"><span class="comment">// 使用全局和忽略大小写匹配</span></div><div class="line"><span class="keyword">let</span> str6 = <span class="string">'AFHDNQUDIEcsjdhjrgjkviqkzcj'</span></div><div class="line"><span class="keyword">let</span> _re = <span class="regexp">/[A-G]/gi</span></div><div class="line"><span class="built_in">console</span>.log(str6.match(_re)) <span class="comment">// ["A", "F", "D", "D", "E", "c", "d", "g", "c"]</span></div><div class="line"></div><div class="line"><span class="comment">// 字符串替换</span></div><div class="line"><span class="comment">// 替换模式请看附表一</span></div><div class="line"><span class="keyword">let</span> str7 = <span class="string">'hi, Len.'</span></div><div class="line"><span class="keyword">let</span> str7New = str7.replace(<span class="regexp">/len/i</span>, <span class="string">'Lencx'</span>)</div><div class="line"><span class="built_in">console</span>.log(str7New) <span class="comment">// hi, Lencx.</span></div><div class="line"><span class="comment">// 全局替换并且忽略大小写</span></div><div class="line"><span class="keyword">let</span> apple = <span class="string">'Apples are round, and apples are juicy.'</span></div><div class="line"><span class="keyword">let</span> appleNew = apple.replace(<span class="regexp">/apples/gi</span>, <span class="string">'oranges'</span>)</div><div class="line"><span class="built_in">console</span>.log(appleNew) <span class="comment">// oranges are round, and oranges are juicy.</span></div><div class="line"></div><div class="line"><span class="comment">// 切换字符串中的单词</span></div><div class="line"><span class="comment">// 如果需切换多个单词的位置，则需写对应的匹配规则，然后用`$n`在对应位置进行插入</span></div><div class="line"><span class="keyword">let</span> switchWords = <span class="string">'Len C'</span></div><div class="line"><span class="keyword">let</span> switchWordsNew = switchWords.replace(<span class="regexp">/(\w+)\s(\w+)/</span>, <span class="string">'$2, $1'</span>)</div><div class="line"><span class="built_in">console</span>.log(switchWordsNew)</div><div class="line"></div><div class="line"><span class="comment">// 将字符串中出现的大写字母全部替换为小写字母，并在替换的字母前插入`_`连字符</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hyphenFormat</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">upperToHyphenLower</span>(<span class="params">match</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'-'</span> + match.toLowerCase()</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> str.replace(<span class="regexp">/[A-Z]/g</span>, upperToHyphenLower)</div><div class="line">&#125;</div><div class="line"><span class="comment">// asda-a-hjfdkfj-u-l-dshvxt-r</span></div><div class="line"><span class="built_in">console</span>.log(hyphenFormat(<span class="string">'asdaAHjfdkfjULDshvxtR'</span>))</div><div class="line"><span class="comment">// 如果使用`$&amp;`则转换大小写将不会工作，这是因为`toLowerCase()`将`$&amp;`作为字符串文字进行转换，然后再使用字符作为模式</span></div><div class="line"><span class="comment">// asda-A-Hjfdkfj-U-L-Dshvxt-R</span></div><div class="line"><span class="string">'asdaAHjfdkfjULDshvxtR'</span>.replace(<span class="regexp">/[A-Z]/g</span>, <span class="string">'-$&amp;'</span>.toLowerCase())</div><div class="line"></div><div class="line"><span class="comment">// 搜索正则表达式和此字符串之间进行匹配，返回匹配到的第一个字符的索引</span></div><div class="line"><span class="string">'nsa ff asac hh f'</span>.search(<span class="regexp">/f/</span>) <span class="comment">// 4</span></div><div class="line"></div><div class="line"><span class="comment">// 提取字符串的一部分并返回一个新的字符串</span></div><div class="line"><span class="keyword">let</span> str8 = <span class="string">'Using slice() to create a new string.'</span></div><div class="line"><span class="keyword">let</span> str8One = str8.slice(<span class="number">1</span>, <span class="number">10</span>)</div><div class="line"><span class="keyword">let</span> str8Two = str8.slice(<span class="number">6</span>, <span class="number">20</span>)</div><div class="line"><span class="keyword">let</span> str8Three = str8.slice(<span class="number">17</span>)</div><div class="line"><span class="built_in">console</span>.log(str8One) <span class="comment">// sing slic</span></div><div class="line"><span class="built_in">console</span>.log(str8Two) <span class="comment">// slice() to cre</span></div><div class="line"><span class="built_in">console</span>.log(str8Three) <span class="comment">// create a new string.</span></div><div class="line"></div><div class="line"><span class="comment">// 将字符串分割为子字符串数组</span></div><div class="line"><span class="comment">// 打印结果请看附图二</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">splitStr</span>(<span class="params">str, separator</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> arr = str.split(separator)</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`The original string is "<span class="subst">$&#123;str&#125;</span>"`</span>)</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`The separator is <span class="subst">$&#123;separator&#125;</span>`</span>)</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`The array has <span class="subst">$&#123;arr.length&#125;</span> \n elements: <span class="subst">$&#123;arr.join(<span class="string">'-'</span>)&#125;</span>`</span>)</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> infoStr = <span class="string">'My name is Len.'</span></div><div class="line"><span class="keyword">let</span> monthStr = <span class="string">'Jan,Feb,Mar,Apr'</span></div><div class="line">splitStr(infoStr, <span class="string">' '</span>)</div><div class="line">splitStr(monthStr, <span class="string">','</span>)</div><div class="line"><span class="comment">// 移除空格和分号</span></div><div class="line"><span class="keyword">let</span> nameStr = <span class="string">'Len ; Tom ;  Wendy; Mia'</span></div><div class="line"><span class="keyword">let</span> _regex = <span class="regexp">/\s*;\s*/</span></div><div class="line"><span class="keyword">let</span> nameRe = nameStr.split(_regex).join(<span class="string">''</span>)</div><div class="line"><span class="built_in">console</span>.log(nameRe) <span class="comment">// LenTomWendyMia</span></div><div class="line"><span class="comment">// 限制返回数组元素的数量</span></div><div class="line"><span class="keyword">let</span> limitArr = <span class="string">'hello world. How are you?'</span></div><div class="line"><span class="built_in">console</span>.log(limitArr.split(<span class="string">' '</span>, <span class="number">3</span>)) <span class="comment">// ["hello", "world.", "How"]</span></div><div class="line"></div><div class="line"><span class="comment">// 转换成小写字母</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'HDKJWC'</span>.toLowerCase()) <span class="comment">// hdkjwc</span></div><div class="line"></div><div class="line"><span class="comment">// 转换成大写字母</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'jkadjakjv'</span>.toUpperCase()) <span class="comment">// JKADJAKJV</span></div><div class="line"></div><div class="line"><span class="comment">// 返回指定对象的字符串</span></div><div class="line"><span class="keyword">let</span> num = <span class="number">2</span></div><div class="line"><span class="keyword">let</span> numToStr = num.toString()</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> numToStr, numToStr) <span class="comment">// string 2</span></div><div class="line"></div><div class="line"><span class="comment">// 修剪头尾空格</span></div><div class="line"><span class="keyword">let</span> spaceStr = <span class="string">'   foo as  s '</span></div><div class="line"><span class="built_in">console</span>.log(spaceStr.trim()) <span class="comment">// foo as  s</span></div><div class="line"></div><div class="line"><span class="comment">// 返回两个索引之间的字符串，一个参数时，则返回该索引到字符串末尾的字符串</span></div><div class="line"><span class="keyword">let</span> hi = <span class="string">'hello world'</span></div><div class="line"><span class="built_in">console</span>.log(hi.substring(<span class="number">3</span>, <span class="number">7</span>)) <span class="comment">// lo w</span></div><div class="line"><span class="built_in">console</span>.log(hi.substring(<span class="number">7</span>, <span class="number">3</span>)) <span class="comment">// lo w</span></div><div class="line"><span class="built_in">console</span>.log(hi.substring(<span class="number">4</span>, <span class="number">8</span>)) <span class="comment">// o wo</span></div><div class="line"><span class="built_in">console</span>.log(hi.substring(<span class="number">4</span>)) <span class="comment">// o world</span></div><div class="line"><span class="built_in">console</span>.log(hi.substring(<span class="number">0</span>, <span class="number">15</span>)) <span class="comment">// hello world</span></div><div class="line"><span class="built_in">console</span>.log(hi.substring(hi.length <span class="number">-4</span>)) <span class="comment">// orld</span></div><div class="line"></div><div class="line"><span class="comment">// 通过指定字符数返回指定位置的字符串中的字符</span></div><div class="line"><span class="keyword">let</span> subStr = <span class="string">'ascfbhsc'</span></div><div class="line"><span class="built_in">console</span>.log(subStr.substr(<span class="number">2</span>, <span class="number">3</span>)) <span class="comment">// cfb</span></div><div class="line"><span class="built_in">console</span>.log(subStr.substr(<span class="number">-5</span>, <span class="number">3</span>)) <span class="comment">// fbh</span></div><div class="line"><span class="built_in">console</span>.log(subStr.substr(<span class="number">-2</span>)) <span class="comment">// sc</span></div><div class="line"><span class="built_in">console</span>.log(subStr.substr(<span class="number">2</span>)) <span class="comment">// cfbhsc</span></div><div class="line"><span class="built_in">console</span>.log(subStr.substr(<span class="number">20</span>)) <span class="comment">// 返回值为空</span></div><div class="line"><span class="built_in">console</span>.log(subStr.substr(<span class="number">-20</span>)) <span class="comment">// ascfbhsc</span></div></pre></td></tr></table></figure>
+<h3 id="附："><a href="#附：" class="headerlink" title="附："></a>附：</h3><ul>
+<li><p>图一<br><img src="/blog/images/js/js-str-match.png" alt="String match()"></p>
+</li>
+<li><p>图二<br><img src="/blog/images/js/js-str-split.png" alt="String match()"></p>
+</li>
+<li><p>表一</p>
+</li>
+</ul>
+<p>替换字符串可以包含以下特殊替换模式</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>插入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$$</td>
+<td>插入一个<code>$</code></td>
+</tr>
+<tr>
+<td>$&amp;</td>
+<td>插入匹配的字符串</td>
+</tr>
+<tr>
+<td>$`</td>
+<td>插入匹配子字符串之前的字符串部分</td>
+</tr>
+<tr>
+<td>$’</td>
+<td>插入匹配子字符串后面的字符串部分</td>
+</tr>
+<tr>
+<td>$n</td>
+<td><code>n</code>是小于100的非负整数，插入第n个括号的子匹配字符串，前提第一个参数是<code>RegExp</code>对象</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;JS：&lt;/strong&gt; 常用方法总结&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="js" scheme="https://lencx.github.io/blog/categories/js/"/>
+    
+    
+      <category term="js" scheme="https://lencx.github.io/blog/tags/js/"/>
+    
+      <category term="base" scheme="https://lencx.github.io/blog/tags/base/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>base-english</title>
+    <link href="https://lencx.github.io/blog/2017/04/10/base-english/"/>
+    <id>https://lencx.github.io/blog/2017/04/10/base-english/</id>
+    <published>2017-04-09T16:01:50.000Z</published>
+    <updated>2017-04-11T09:08:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>en</th>
+<th>zh-CN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new concept</td>
+<td>新概念</td>
+</tr>
+<tr>
+<td>illustrate</td>
+<td>说明</td>
+</tr>
+<tr>
+<td>statements</td>
+<td>声明</td>
+</tr>
+<tr>
+<td>assign</td>
+<td>分配</td>
+</tr>
+<tr>
+<td>identifiers</td>
+<td>标识符</td>
+</tr>
+<tr>
+<td>eaual</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>parameter</td>
+<td>参数</td>
+</tr>
+<tr>
+<td>defining</td>
+<td>定义</td>
+</tr>
+<tr>
+<td>triple</td>
+<td>三重</td>
+</tr>
+<tr>
+<td>expressions</td>
+<td>表达式</td>
+</tr>
+<tr>
+<td>versus</td>
+<td>与</td>
+</tr>
+<tr>
+<td>reason</td>
+<td>原因</td>
+</tr>
+<tr>
+<td>syntax</td>
+<td>句法</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;en&lt;/th&gt;
+&lt;th&gt;zh-CN&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;new concept&lt;/td&gt;
+&lt;td&gt;新概念&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;illustrate&lt;/td&gt;
+    
+    </summary>
+    
+    
+      <category term="English" scheme="https://lencx.github.io/blog/tags/English/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6 - Array</title>
@@ -570,9 +735,9 @@
       <category term="git" scheme="https://lencx.github.io/blog/categories/git/"/>
     
     
-      <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
-    
       <category term="command" scheme="https://lencx.github.io/blog/tags/command/"/>
+    
+      <category term="Tricks" scheme="https://lencx.github.io/blog/tags/Tricks/"/>
     
       <category term="git" scheme="https://lencx.github.io/blog/tags/git/"/>
     

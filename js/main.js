@@ -258,7 +258,6 @@ $(function() {
     }, 10000)
 }()
 
-
 // sidebar archives
 $(function() {
     try {
